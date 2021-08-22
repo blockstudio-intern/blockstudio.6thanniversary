@@ -1,0 +1,40 @@
+.map {
+  width: 3300px;
+  height: 2000px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.map .island {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.map .island.main-island {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left: 1325px;
+  top: 729px;
+}
+
+.map .island.main-island:hover .main-island-hover {
+  display: block;
+}
+
+.map .island.main-island .main-island-hover {
+  width: 286.96px;
+  height: 153.57px;
+  position: absolute;
+  left: 10px;
+  top: 280px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+/*# sourceMappingURL=style.css.map */

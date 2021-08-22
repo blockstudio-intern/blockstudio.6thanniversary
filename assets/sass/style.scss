@@ -1,0 +1,37 @@
+@mixin background($size) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+.map {
+  width: 3300px;
+  height: 2000px;
+  @include background(cover);
+  .island {
+    @include background(cover);
+    &.main-island {
+      width: 600px;
+      height: 400px;
+
+      position: absolute;
+      left: 1325px;
+      top: 729px;
+
+      &:hover .main-island-hover {
+        display: block;
+      }
+      .main-island-hover {
+        width: 286.96px;
+        height: 153.57px;
+
+        position: absolute;
+        left: 10px;
+        top: 280px;
+        @include background(contain);
+        display: none;
+
+        transition: all 1s;
+      }
+    }
+  }
+}
