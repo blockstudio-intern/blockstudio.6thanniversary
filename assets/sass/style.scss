@@ -50,7 +50,6 @@ body {
     z-index: 9999;
   }
   .mini-map{
-    @include background(contain);
     width: 200px;
     height: 130px;
     margin: 20px;
@@ -58,6 +57,13 @@ body {
     position: fixed;
     z-index: 9999;
     overflow: hidden;
+    .map-sm{
+      position: absolute;
+      @include background(contain);
+      @include center;
+      width: 195px;
+      height: 125px;
+    }
     #minimap-pointer{
     height: 10px;
     width: 10px;
