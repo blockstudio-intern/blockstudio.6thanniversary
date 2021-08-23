@@ -2,15 +2,35 @@
 <html lang="zh-TW">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blockstudio 6th Anniversary</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <link rel=”shortcut icon” href=”./favicon.ico”>
+    <title>版塊Block Studio 六週年線上展 | Block Studio</title>
+    <!-- CSS/JS -->
+    <link rel="stylesheet" href="./css/other.css">
     <link rel="stylesheet" href="assets/vendor/nornalize_css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Cursor -->
+    <div id="coords">
+        <div id="Xbar"></div>
+        <div id="Ybar"></div>    
+    </div>
+    <div id="coord-num"></div>
+    <div id="a-cursor">
+        <img width="30" src="assets/images/landing-page/icons/coordinate.png">
+    </div>
+    <!-- Map -->
     <div class="wrapper">
         <div class="nav">
             <div class="logo" style="background-image: url(assets/images/logo--sm.png);"></div>
@@ -144,6 +164,9 @@
             <!-- <div class="island boat-4" style="background-image: url(assets/images/island/island--lg/boat-3.png);"></div> -->
         </div>
     </div>
+    <!-- End of Map -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>
