@@ -1,3 +1,5 @@
+//Kate
+//showTime//
 function showTime() {
     var date = new Date();
     var y = date.getFullYear();
