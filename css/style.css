@@ -42,7 +42,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 130px;
+  width: 200px;
   height: 130px;
   margin: 20px;
   bottom: 0;
@@ -51,25 +51,21 @@ body {
   overflow: hidden;
 }
 
-.nav .mini-map .map--sm {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 270px;
-  height: 180px;
+.nav .mini-map #minimap-pointer {
+  height: 10px;
+  width: 10px;
+  background-color: #000;
+  border: 1px solid #000;
 }
 
 .nav .mini-map .map-fence {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 130px;
+  width: 200px;
   height: 130px;
+  position: absolute;
+  top: 0;
 }
 
 .nav .celebrate-btn {
@@ -124,9 +120,16 @@ body {
   }
 }
 
+#container {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 .map {
-  width: 2700px;
-  height: 1800px;
+  width: 3000px;
+  height: 2000px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -414,19 +417,5 @@ body {
   height: 96px;
   left: 16%;
   top: 62%;
-}
-
-#container {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-#minimap-pointer {
-  height: 10px;
-  width: 10px;
-  background-color: #000;
-  border: 1px solid #000;
 }
 /*# sourceMappingURL=style.css.map */

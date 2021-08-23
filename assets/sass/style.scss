@@ -51,25 +51,25 @@ body {
   }
   .mini-map{
     @include background(contain);
-    width: 130px;
+    width: 200px;
     height: 130px;
     margin: 20px;
     bottom: 0;
     position: fixed;
     z-index: 9999;
     overflow: hidden;
-
-    .map--sm{
-      @include background(cover);
-      @include center;
-
-      width: 270px;
-      height: 180px;
+    #minimap-pointer{
+    height: 10px;
+    width: 10px;
+    background-color: #000;
+    border: 1px solid #000;
     }
     .map-fence{
-    @include background(contain);
-    width: 130px;
-    height: 130px;
+      @include background(contain);
+      width: 200px;
+      height: 130px;
+      position: absolute;
+      top: 0;
     }
   }
   .celebrate-btn{
@@ -103,9 +103,15 @@ body {
     transform: translate(-50%,-50%) rotate(360deg);
   }
 }
+#container {
+  background-color: #fff;
+  height:100%; 
+  width: 100%;
+  overflow: hidden;
+}
 .map {
-  width: 2700px;
-  height: 1800px;
+  width: 3000px;
+  height: 2000px;
   @include background(cover);
   .island-hover{
     margin: -20px;
@@ -343,18 +349,8 @@ body {
     }
   }
 }
-#container {
-  background-color: #fff;
-  height:100%; 
-  width: 100%;
-  overflow: hidden;
-}
-#minimap-pointer{
-  height: 10px;
-  width: 10px;
-  background-color: #000;
-  border: 1px solid #000;
-}
+
+
 
 
 

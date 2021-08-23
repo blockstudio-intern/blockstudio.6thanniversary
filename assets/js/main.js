@@ -51,10 +51,10 @@ update();
 //mini-map//
 $(function () {
     // raw-image 1280 * 1677
-    const RAW_IMAGE_WIDTH = 2700;
-    const RAW_IMAGE_HEIGHT = 1800;
+    const RAW_IMAGE_WIDTH = 3100;
+    const RAW_IMAGE_HEIGHT = 2500;
     // mini-map 128 * 167.7
-    const MINIMAP_WIDTH = 20;
+    const MINIMAP_WIDTH = 10;
     const IMAGE_RATE = RAW_IMAGE_HEIGHT / RAW_IMAGE_WIDTH;
 
     const painting = document.getElementById("rawImage");
@@ -78,11 +78,11 @@ $(function () {
     const axes = new eg.Axes({
         rawX: {
             range: [0, RAW_IMAGE_WIDTH - viewRect.width],
-            bounce: 100
+            bounce: 10
         },
         rawY: {
             range: [0, RAW_IMAGE_HEIGHT - viewRect.height],
-            bounce: 100
+            bounce: 10
         }
     }, {
         deceleration: 0.01
