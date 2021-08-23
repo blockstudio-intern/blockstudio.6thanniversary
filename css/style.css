@@ -399,4 +399,10 @@
   left: 16%;
   top: 62%;
 }
+#container {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
 /*# sourceMappingURL=style.css.map */
