@@ -40,14 +40,14 @@ body {
     width: 35px;
     height: 35px;
     position: fixed;
-    z-index: 100000004;
+    z-index: 2147483647;
   }
   .time{
     position: fixed;
     margin: 20px;
 
     right: 0;
-    z-index: 100000004;
+    z-index: 2147483647;
   }
   .mini-map{
     @include background(contain);
@@ -56,7 +56,7 @@ body {
     margin: 20px;
     bottom: 0;
     position: fixed;
-    z-index: 100000004;
+    z-index: 2147483647;
     overflow: hidden;
 
     .map--sm{
@@ -81,7 +81,7 @@ body {
     bottom: 0;
     right: 0;
     position: fixed;
-    z-index: 100000004;
+    z-index: 2147483647;
     .celebrate-motion{
       @include background(contain);
       @include center;
