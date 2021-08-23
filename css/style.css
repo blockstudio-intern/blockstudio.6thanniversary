@@ -4,34 +4,50 @@
   position: relative;
 }
 
+html {
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  height: 100%;
+  width: calc(100% + 18px);
+  overflow: auto;
+}
+
 .nav .logo {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 2vw;
-  width: 2.5vw;
-  height: 2.5vw;
+  margin: 20px;
+  width: 35px;
+  height: 35px;
   position: fixed;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .nav .time {
   position: fixed;
-  margin: 2vw;
+  margin: 20px;
   right: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .nav .mini-map {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 9vw;
-  height: 9vw;
-  margin: 2vw;
+  width: 130px;
+  height: 130px;
+  margin: 20px;
   bottom: 0;
   position: fixed;
-  z-index: 1000;
+  z-index: 9999;
   overflow: hidden;
 }
 
@@ -44,30 +60,30 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 15vw;
-  height: 15vw;
+  width: 400px;
+  height: 270px;
 }
 
 .nav .mini-map .map-fence {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 9vw;
-  height: 9vw;
+  width: 130px;
+  height: 130px;
 }
 
 .nav .celebrate-btn {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 10vw;
-  height: 10vw;
-  margin-bottom: 2vw;
-  margin-right: 1vw;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  margin-right: 10px;
   bottom: 0;
   right: 0;
   position: fixed;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .nav .celebrate-btn .celebrate-motion {
@@ -79,8 +95,8 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 9vw;
-  height: 9vw;
+  width: 130px;
+  height: 130px;
   position: absolute;
   -webkit-animation: rotate 5s 0s linear infinite;
           animation: rotate 5s 0s linear infinite;
@@ -109,17 +125,17 @@
 }
 
 .map {
-  width: 210vw;
-  height: 140vw;
+  width: 2700px;
+  height: 1800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .map .island-hover {
-  margin: -2vw;
-  width: 18vw;
-  height: 10vw;
+  margin: -20px;
+  width: 220px;
+  height: 120px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -138,12 +154,12 @@
 
 .map .island:hover .island-hover {
   opacity: 1;
-  margin: 0vw;
+  margin: 0px;
 }
 
 .map .island.main-island {
-  width: 40vw;
-  height: 25vw;
+  width: 480px;
+  height: 300px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -152,253 +168,254 @@
 }
 
 .map .island.main-island .main-island-hover {
-  left: 1vw;
-  top: 17vw;
+  left: 0%;
+  top: 70%;
 }
 
 .map .island.memorial-island {
-  width: 18vw;
-  height: 15vw;
+  width: 216px;
+  height: 180px;
   left: 60%;
   top: 57%;
 }
 
 .map .island.memorial-island .memorial-island-hover {
-  left: -6.5vw;
-  top: 9vw;
+  left: -96px;
+  top: 108px;
 }
 
 .map .island.bens-party {
-  width: 15vw;
-  height: 10vw;
+  width: 180px;
+  height: 120px;
   left: 53%;
   top: 30%;
 }
 
 .map .island.bens-party .bens-party-hover {
-  left: -8vw;
-  top: 5vw;
+  left: -120px;
+  top: 60px;
 }
 
 .map .island.projects-island-1 {
-  width: 33vw;
-  height: 30vw;
+  width: 360px;
+  height: 360px;
   left: 9%;
   top: 47%;
 }
 
 .map .island.projects-island-1 .projects-island-hover {
-  left: -9vw;
-  top: 25vw;
+  left: -30%;
+  top: 80%;
 }
 
 .map .island.projects-island-2 {
-  width: 15vw;
-  height: 11vw;
+  width: 180px;
+  height: 121px;
   left: 33%;
   top: 60%;
 }
 
 .map .island.projects-island-2 .projects-island-hover {
-  left: -7vw;
-  top: 6vw;
+  left: -84px;
+  top: 72px;
 }
 
 .map .island.projects-island-3 {
-  width: 10vw;
-  height: 9vw;
+  width: 120px;
+  height: 108px;
   left: 25%;
   top: 66%;
 }
 
 .map .island.projects-island-3 .projects-island-hover {
-  left: -9vw;
-  top: 5vw;
+  left: -108px;
+  top: 60px;
 }
 
 .map .island.projects-island-4 {
-  width: 13vw;
-  height: 10vw;
+  width: 156px;
+  height: 120px;
   left: 43%;
   top: 70%;
 }
 
 .map .island.projects-island-4 .projects-island-hover {
-  left: -9vw;
-  top: 5vw;
+  left: -108px;
+  top: 60px;
 }
 
 .map .island.projects-island-5 {
-  width: 14vw;
-  height: 11vw;
+  width: 168px;
+  height: 121px;
   left: 80%;
   top: 65%;
 }
 
 .map .island.projects-island-5 .projects-island-hover {
-  left: -9vw;
-  top: 5vw;
+  left: -84px;
+  top: 72px;
 }
 
 .map .island.projects-island-6 {
-  width: 20vw;
-  height: 15vw;
+  width: 240px;
+  height: 180px;
   left: 83%;
   top: 53%;
 }
 
 .map .island.projects-island-6 .projects-island-hover {
-  left: -7vw;
-  top: 12vw;
+  left: -84px;
+  top: 96px;
 }
 
 .map .island.projects-island-7 {
-  width: 13vw;
-  height: 10vw;
+  width: 156px;
+  height: 120px;
   left: 74%;
   top: 45%;
 }
 
 .map .island.projects-island-7 .projects-island-hover {
-  left: -9vw;
-  top: 5vw;
+  left: -108px;
+  top: 60px;
 }
 
 .map .island.projects-island-8 {
-  width: 20vw;
-  height: 15vw;
+  width: 240px;
+  height: 180px;
   left: 68%;
   top: 20%;
 }
 
 .map .island.projects-island-8 .projects-island-hover {
-  left: -8vw;
-  top: 11vw;
+  left: -96px;
+  top: 121px;
 }
 
 .map .island.projects-island-9 {
-  width: 12vw;
-  height: 10vw;
+  width: 144px;
+  height: 120px;
   left: 40%;
   top: 15%;
 }
 
 .map .island.projects-island-9 .projects-island-hover {
-  left: -8vw;
-  top: 5vw;
+  left: -70%;
+  top: 60%;
 }
 
 .map .island.projects-island-10 {
-  width: 15vw;
-  height: 12vw;
+  width: 180px;
+  height: 144px;
   left: 34%;
   top: 35%;
 }
 
 .map .island.projects-island-10 .projects-island-hover {
-  left: -8vw;
-  top: 6vw;
+  left: -96px;
+  top: 72px;
 }
 
 .map .island.islanders-1 {
-  width: 19vw;
-  height: 14vw;
+  width: 228px;
+  height: 168px;
   left: 23%;
   top: 23%;
 }
 
 .map .island.islanders-1 .islanders-hover {
-  left: -13vw;
-  top: 12vw;
+  left: -70%;
+  top: 80%;
 }
 
 .map .island.islanders-2 {
-  width: 18vw;
-  height: 13vw;
+  width: 180px;
+  height: 156px;
   left: 30%;
   top: 80%;
 }
 
 .map .island.islanders-2 .islanders-hover {
-  left: -11vw;
-  top: 9vw;
+  left: -121px;
+  top: 108px;
 }
 
 .map .island.islanders-3 {
-  width: 16vw;
-  height: 11vw;
+  width: 160px;
+  height: 121px;
   left: 65%;
   top: 75%;
 }
 
 .map .island.islanders-3 .islanders-hover {
-  left: -12vw;
-  top: 9vw;
+  left: -144px;
+  top: 90px;
 }
 
 .map .island.islanders-4 {
-  width: 17vw;
-  height: 12vw;
+  width: 204px;
+  height: 144px;
   left: 87%;
   top: 33%;
 }
 
 .map .island.islanders-4 .islanders-hover {
-  left: -13vw;
-  top: 9vw;
+  left: -156px;
+  top: 108px;
 }
 
 .map .island.islanders-5 {
-  width: 15vw;
-  height: 9vw;
+  width: 180px;
+  height: 108px;
   left: 55%;
   top: 10%;
 }
 
 .map .island.islanders-5 .islanders-hover {
-  left: -11vw;
-  top: 7vw;
+  left: -144px;
+  top: 72px;
 }
 
 .map .island.copyright {
-  width: 12vw;
-  height: 8vw;
+  width: 144px;
+  height: 96px;
   left: 48%;
   top: 88%;
 }
 
 .map .island.copyright .islanders-hover {
-  left: 15vw;
-  top: 1vw;
+  left: 121%;
+  top: -10%;
 }
 
 .map .island.boat-1 {
-  width: 17vw;
-  height: 8vw;
+  width: 204px;
+  height: 96px;
   left: 16%;
   top: 59%;
 }
 
 .map .island.boat-2 {
-  width: 18vw;
-  height: 8vw;
+  width: 180px;
+  height: 96px;
   left: 77%;
   top: 78%;
 }
 
 .map .island.boat-3 {
-  width: 16vw;
-  height: 16vw;
+  width: 192px;
+  height: 192px;
   left: 76%;
   top: 34%;
 }
 
 .map .island.boat-4 {
-  width: 18vw;
-  height: 8vw;
+  width: 180px;
+  height: 96px;
   left: 16%;
   top: 62%;
 }
+
 #container {
   background-color: #fff;
   height: 100%;

@@ -1,6 +1,6 @@
 /* by Roizi */
 
-/* Coordinate */
+/* Coordinate
 document.getElementById("coords").addEventListener('mousemove', function(event) {
     var coordnum_x = (event.clientX*7 + 35600)/1000 ;
     var coordnum_y = (event.clientY*5 + 24500)/1000 ;
@@ -13,7 +13,7 @@ document.getElementById("coords").addEventListener('mousemove', function(event) 
     document.getElementById("coord-num").style.top = 20 + event.clientY + 'px'; 
     document.getElementById("a-cursor").style.left = coordimg_x + 'px';
     document.getElementById("a-cursor").style.top = coordimg_y + 'px'; 
-});
+}); */
 /* Show Time */
 function showTime() {
     var date = new Date();
