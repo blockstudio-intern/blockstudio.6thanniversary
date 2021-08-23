@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+// ** 隱藏滾動條 ** \\
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+    // width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    height: 100%;
+	  width: calc(100% + 18px);
+	  overflow: auto;
+}
+// ** 隱藏滾動條 ** \\
+
+@mixin background($size) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+@mixin center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.nav{
+  .logo{
+    @include background(contain);
+    margin: 20px;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    z-index: 9999;
+  }
+  .time{
+    position: fixed;
+    margin: 20px;
+
+    right: 0;
+    z-index: 9999;
+  }
+  .mini-map{
+    @include background(contain);
+    width: 130px;
+    height: 130px;
+    margin: 20px;
+    bottom: 0;
+    position: fixed;
+    z-index: 9999;
+    overflow: hidden;
+
+    .map--sm{
+      @include background(cover);
+      @include center;
+
+      width: 400px;
+      height: 270px;
+    }
+    .map-fence{
+    @include background(contain);
+    width: 130px;
+    height: 130px;
+    }
+  }
+  .celebrate-btn{
+    @include background(contain);
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 9999;
+    .celebrate-motion{
+      @include background(contain);
+      @include center;
+
+      width: 130px;
+      height: 130px;
+      position: absolute;
+      // right: 0;
+
+      animation: rotate 5s 0s linear infinite;;
+    }
+  }
+}
+@keyframes rotate{
+  0%{
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+.map {
+  width: 2700px;
+  height: 1800px;
+  @include background(cover);
+  .island-hover{
+    margin: -20px;
+    width: 220px;
+    height: 120px;
+    @include background(contain);
+    position: absolute;
+    opacity: 0;
+
+    transition: all 0.3s;
+  }
+  .island {
+    @include background(contain);
+    position: absolute;
+
+    &:hover .island-hover {
+      opacity: 1; 
+      margin: 0px;
+    }
+    &.main-island {
+      width: 480px;
+      height: 300px;
+      @include center;
+      .main-island-hover {
+        left: 0%;
+        top: 70%;
+      }
+    }
+    &.memorial-island {
+      width: 216px;
+      height: 180px;
+  
+      left: 60%;
+      top: 57%;
+      .memorial-island-hover {
+        left: -96px;
+        top: 108px;
+      }
+    }
+    &.bens-party {
+      width: 180px;
+      height: 120px;
+      left: 53%;
+      top: 30%;
+      .bens-party-hover {
+        left: -120px;
+        top: 60px;
+      }
+    }
+    &.projects-island-1 {
+      width: 360px;
+      height: 360px;
+      left: 9%;
+      top: 47%;
+
+      .projects-island-hover {
+        left: -30%;
+        top: 80%;
+      }
+    }
+    &.projects-island-2 {
+      width: 180px;
+      height: 121px;
+      left: 33%;
+      top: 60%;
+
+      .projects-island-hover {
+        left: -84px;
+        top: 72px;
+      }
+    }
+    &.projects-island-3 {
+      width: 120px;
+      height: 108px;
+      left: 25%;
+      top: 66%;
+      .projects-island-hover {
+        left: -108px;
+        top: 60px;
+      }
+    }
+    &.projects-island-4 {
+      width: 156px;
+      height: 120px;
+      left: 43%;
+      top: 70%;
+      .projects-island-hover {
+        left: -108px;
+        top: 60px;
+      }
+    }
+    &.projects-island-5 {
+      width: 168px;
+      height: 121px;
+      left: 80%;
+      top: 65%;
+      .projects-island-hover {
+        left: -84px;
+        top: 72px;
+      }
+    }
+    &.projects-island-6 {
+      width: 240px;
+      height: 180px;
+      left: 83%;
+      top: 53%;
+      .projects-island-hover {
+        left: -84px;
+        top: 96px;
+      }
+    }
+    &.projects-island-7 {
+      width: 156px;
+      height: 120px;
+      left: 74%;
+      top: 45%;
+      .projects-island-hover {
+        left: -108px;
+        top: 60px;
+      }
+    }
+    &.projects-island-8 {
+      width: 240px;
+      height: 180px;
+      left: 68%;
+      top: 20%;
+      .projects-island-hover {
+        left: -96px;
+        top: 121px;
+      }
+    }
+    &.projects-island-9 {
+      width: 144px;
+      height: 120px;
+      left: 40%;
+      top: 15%;
+      .projects-island-hover {
+        left: -70%;
+        top: 60%;
+      }
+    }
+    &.projects-island-10 {
+      width: 180px;
+      height: 144px;
+      left: 34%;
+      top: 35%;
+      .projects-island-hover {
+        left: -96px;
+        top: 72px;
+      }
+    }
+    &.islanders-1 {
+      width: 228px;
+      height: 168px;
+      left: 23%;
+      top: 23%;
+      .islanders-hover {
+        left: -70%;
+        top: 80%;
+      }
+    }
+    &.islanders-2 {
+      width: 180px;
+      height: 156px;
+      left: 30%;
+      top: 80%;
+      .islanders-hover {
+        left: -121px;
+        top: 108px;
+      }
+    }
+    &.islanders-3 {
+      width: 160px;
+      height: 121px;
+      left: 65%;
+      top: 75%;
+      .islanders-hover {
+        left: -144px;
+        top: 90px;
+      }
+    }
+    &.islanders-4 {
+      width: 204px;
+      height: 144px;
+      left: 87%;
+      top: 33%;
+      .islanders-hover {
+        left: -156px;
+        top: 108px;
+      }
+    }
+    &.islanders-5 {
+      width: 180px;
+      height: 108px;
+      left: 55%;
+      top: 10%;
+      .islanders-hover {
+        left: -144px;
+        top: 72px;
+      }
+    }
+    &.copyright {
+      width: 144px;
+      height: 96px;
+      left: 48%;
+      top: 88%;
+      .islanders-hover {
+        left: 121%;
+        top: -10%;
+      }
+    }
+    &.boat-1 {
+      width: 204px;
+      height: 96px;
+      left: 16%;
+      top: 59%;
+    }
+    &.boat-2 {
+      width: 180px;
+      height: 96px;
+      left: 77%;
+      top: 78%;
+    }
+    &.boat-3 {
+      width: 192px;
+      height: 192px;
+      left: 76%;
+      top: 34%;
+    }
+    &.boat-4 {
+      width: 180px;
+      height: 96px;
+      left: 16%;
+      top: 62%;
+    }
+  }
+}
+#container {
+  background-color: #fff;
+  height:100%; 
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
