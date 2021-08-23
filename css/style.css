@@ -117,15 +117,16 @@
 }
 
 .map .island-hover {
+  margin: -2vw;
   width: 18vw;
   height: 10vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  display: none;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .map .island {
@@ -136,7 +137,8 @@
 }
 
 .map .island:hover .island-hover {
-  display: block;
+  opacity: 1;
+  margin: 0vw;
 }
 
 .map .island.main-island {

@@ -89,20 +89,23 @@
   height: 140vw;
   @include background(cover);
   .island-hover{
+    margin: -2vw;
     width: 18vw;
     height: 10vw;
     @include background(contain);
     position: absolute;
-    display: none;
+    opacity: 0;
 
-    transition: all 1s;
+    transition: all 0.3s;
   }
   .island {
     @include background(contain);
     position: absolute;
 
     &:hover .island-hover {
-        display: block;  
+      opacity: 1; 
+      margin: 0vw;
+
     }
     &.main-island {
       width: 40vw;
