@@ -15,9 +15,11 @@
         <div class="nav">
             <div class="logo" style="background-image: url(assets/images/logo--sm.png);"></div>
             <div id="TimeDisplay" class="time" onload="showTime()"></div>
-            <div class="mini-map" id="minimap-pointer">
+            <div class="mini-map">
                 <div class="map--sm" id="minimap"
-                    style="background-image: url(assets/images/landing-page/min-map.png);"></div>
+                    style="background-image: url(assets/images/landing-page/min-map.png);">
+                    <div class="map-dot" id="minimap-pointer"></div>
+                </div>
                 <div class="map-fence" style="background-image: url(assets/images/landing-page/map-fence.png);"></div>
             </div>
             <div class="celebrate-btn" style="background-image: url(assets/images/landing-page/btn/btn-celebrate.png);">
@@ -25,8 +27,8 @@
                 </div>
             </div>
         </div>
-        <div>
-            <div class="map" style="background-image: url(assets/images/grid.png);">
+        <div id="imageView">
+            <div class="map" id="rawImage" style="background-image: url(assets/images/grid.png);">
                 <div class="island main-island"
                     style="background-image: url(assets/images/island/island--lg/the-main-island--lg.png);">
                     <div class="island-hover main-island-hover"
@@ -153,6 +155,8 @@
 
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://naver.github.io/egjs-axes/release/latest/dist/axes.pkgd.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>

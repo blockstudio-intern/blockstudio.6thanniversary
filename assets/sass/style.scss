@@ -63,8 +63,8 @@ body {
       @include background(cover);
       @include center;
 
-      width: 400px;
-      height: 270px;
+      width: 270px;
+      height: 180px;
     }
     .map-fence{
     @include background(contain);
@@ -348,6 +348,12 @@ body {
   height:100%; 
   width: 100%;
   overflow: hidden;
+}
+#minimap-pointer{
+  height: 10px;
+  width: 10px;
+  background-color: #000;
+  border: 1px solid #000;
 }
 
 
