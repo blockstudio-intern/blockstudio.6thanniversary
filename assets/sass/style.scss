@@ -38,12 +38,19 @@
     bottom: 0;
     position: fixed;
     z-index: 1000;
+    overflow: hidden;
+
     .map--sm{
       @include background(cover);
       @include center;
 
-      width: 8.4vw;
-      height: 8.4vw;
+      width: 15vw;
+      height: 15vw;
+    }
+    .map-fence{
+    @include background(contain);
+    width: 9vw;
+    height: 9vw;
     }
   }
   .celebrate-btn{
@@ -87,6 +94,8 @@
     @include background(contain);
     position: absolute;
     display: none;
+
+    transition: all 1s;
   }
   .island {
     @include background(contain);
@@ -129,7 +138,7 @@
       width: 33vw;
       height: 30vw;
       left: 9%;
-      top: 50%;
+      top: 47%;
 
       .projects-island-hover {
         left: -9vw;
@@ -200,7 +209,7 @@
     &.projects-island-8 {
       width: 20vw;
       height: 15vw;
-      left: 74%;
+      left: 68%;
       top: 20%;
       .projects-island-hover {
         left: -8vw;
@@ -270,7 +279,7 @@
     &.islanders-5 {
       width: 15vw;
       height: 9vw;
-      left: 58%;
+      left: 55%;
       top: 10%;
       .islanders-hover {
         left: -11vw;
@@ -286,6 +295,30 @@
         left: 15vw;
         top: 1vw;
       }
+    }
+    &.boat-1 {
+      width: 17vw;
+      height: 8vw;
+      left: 16%;
+      top: 59%;
+    }
+    &.boat-2 {
+      width: 18vw;
+      height: 8vw;
+      left: 77%;
+      top: 78%;
+    }
+    &.boat-3 {
+      width: 16vw;
+      height: 16vw;
+      left: 76%;
+      top: 34%;
+    }
+    &.boat-4 {
+      width: 18vw;
+      height: 8vw;
+      left: 16%;
+      top: 62%;
     }
   }
 }
