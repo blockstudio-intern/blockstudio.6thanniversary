@@ -68,7 +68,7 @@ body {
     font-weight: 400;
     unicode-range: U+00-024F;
     font-display: swap;
-    src: url(https://blockstudio-intern.github.io/blockstudio.6thanniversary/assets/font/Press_Start_2P/PressStart2P-Regular.ttf) format("truetype");
+    src: url('../assets/font/Press_Start_2P/PressStart2P-Regular.ttf') format("truetype");
 }
 @font-face {
     font-family: zh-title;
@@ -83,12 +83,12 @@ body {
 @font-face {
     font-family: en-title;
     font-display: swap;
-    src: url(https://blockstudio-intern.github.io/blockstudio.6thanniversary/assets/font/Press_Start_2P/PressStart2P-Regular.ttf) format("truetype");
+    src: url('../assets/font/Press_Start_2P/PressStart2P-Regular.ttf') format("truetype");
 }
 @font-face {
     font-family: en-normal;
     font-display: swap;
-    src: url(https://blockstudio-intern.github.io/blockstudio.6thanniversary/assets/font/Roboto-Light.ttf) format("truetype");
+    src: url('../assets/font/Roboto-Light.ttf') format("truetype");
 }
 @font-face {
     font-family: normal-font;
@@ -109,7 +109,7 @@ body {
     font-weight: 400;
     unicode-range: U+00-024F;
     font-display: swap;
-    src: url(../assets/font/Roboto-Light.ttf) format("truetype");
+    src: url('../assets/font/Roboto-Light.ttf') format("truetype");
 }
 .normal-title{
     font-family: normal-title;
