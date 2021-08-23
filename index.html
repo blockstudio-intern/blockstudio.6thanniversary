@@ -11,12 +11,13 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="container">
         <div class="nav">
             <div class="logo" style="background-image: url(assets/images/logo--sm.png);"></div>
-            <div class="time">06/01/21 19:23:20</div>
-            <div class="mini-map">
-                <div class="map--sm" style="background-image: url(assets/images/landing-page/min-map.png);"></div>
+            <div id="TimeDisplay" class="time" onload="showTime()"></div>
+            <div class="mini-map" id="minimap-pointer">
+                <div class="map--sm" id="minimap"
+                    style="background-image: url(assets/images/landing-page/min-map.png);"></div>
                 <div class="map-fence" style="background-image: url(assets/images/landing-page/map-fence.png);"></div>
             </div>
             <div class="celebrate-btn" style="background-image: url(assets/images/landing-page/btn/btn-celebrate.png);">
@@ -24,126 +25,138 @@
                 </div>
             </div>
         </div>
-        <div class="map" style="background-image: url(assets/images/grid.png);">
-            <div class="island main-island"
-                style="background-image: url(assets/images/island/island--lg/the-main-island--lg.png);">
-                <div class="island-hover main-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/the-main-island.png);">
+        <div>
+            <div class="map" style="background-image: url(assets/images/grid.png);">
+                <div class="island main-island"
+                    style="background-image: url(assets/images/island/island--lg/the-main-island--lg.png);">
+                    <div class="island-hover main-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/the-main-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island memorial-island"
-                style="background-image: url(assets/images/island/island--lg/memorial-island--lg.png);">
-                <div class="island-hover memorial-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/memorial-island.png);">
+                <div class="island memorial-island"
+                    style="background-image: url(assets/images/island/island--lg/memorial-island--lg.png);">
+                    <div class="island-hover memorial-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/memorial-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island bens-party"
-                style="background-image: url(assets/images/island/island--lg/bens-party--lg.png);">
-                <div class="island-hover bens-party-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/bens-party.png);">
+                <div class="island bens-party"
+                    style="background-image: url(assets/images/island/island--lg/bens-party--lg.png);">
+                    <div class="island-hover bens-party-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/bens-party.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-1"
-                style="background-image: url(assets/images/island/island--lg/projects-island-1--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-1"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-1--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-2"
-                style="background-image: url(assets/images/island/island--lg/projects-island-2--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-2"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-2--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-3"
-                style="background-image: url(assets/images/island/island--lg/projects-island-3--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-3"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-3--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-4"
-                style="background-image: url(assets/images/island/island--lg/projects-island-4--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-4"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-4--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-5"
-                style="background-image: url(assets/images/island/island--lg/projects-island-5--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-5"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-5--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-6"
-                style="background-image: url(assets/images/island/island--lg/projects-island-6--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-6"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-6--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-7"
-                style="background-image: url(assets/images/island/island--lg/projects-island-7--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-7"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-7--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-8"
-                style="background-image: url(assets/images/island/island--lg/projects-island-8--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-8"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-8--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-9"
-                style="background-image: url(assets/images/island/island--lg/projects-island-9--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-9"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-9--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island projects-island-10"
-                style="background-image: url(assets/images/island/island--lg/projects-island-10--lg.png);">
-                <div class="island-hover projects-island-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                <div class="island projects-island-10"
+                    style="background-image: url(assets/images/island/island--lg/projects-island-10--lg.png);">
+                    <div class="island-hover projects-island-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/projects-island.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island islanders-1"
-                style="background-image: url(assets/images/island/island--lg/islanders-1--lg.png);">
-                <div class="island-hover islanders-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                <div class="island islanders-1"
+                    style="background-image: url(assets/images/island/island--lg/islanders-1--lg.png);">
+                    <div class="island-hover islanders-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island islanders-2"
-                style="background-image: url(assets/images/island/island--lg/islanders-2--lg.png);">
-                <div class="island-hover islanders-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                <div class="island islanders-2"
+                    style="background-image: url(assets/images/island/island--lg/islanders-2--lg.png);">
+                    <div class="island-hover islanders-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island islanders-3"
-                style="background-image: url(assets/images/island/island--lg/islanders-3--lg.png);">
-                <div class="island-hover islanders-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                <div class="island islanders-3"
+                    style="background-image: url(assets/images/island/island--lg/islanders-3--lg.png);">
+                    <div class="island-hover islanders-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island islanders-4"
-                style="background-image: url(assets/images/island/island--lg/islanders-4--lg.png);">
-                <div class="island-hover islanders-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                <div class="island islanders-4"
+                    style="background-image: url(assets/images/island/island--lg/islanders-4--lg.png);">
+                    <div class="island-hover islanders-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island islanders-5"
-                style="background-image: url(assets/images/island/island--lg/islanders-5--lg.png);">
-                <div class="island-hover islanders-hover"
-                    style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                <div class="island islanders-5"
+                    style="background-image: url(assets/images/island/island--lg/islanders-5--lg.png);">
+                    <div class="island-hover islanders-hover"
+                        style="background-image: url(assets/images/landing-page/island--hover/islanders.png);">
+                    </div>
                 </div>
-            </div>
-            <div class="island copyright" style="background-image: url(assets/images/island/island--lg/copyright.png);">
-                <div class="island-hover islanders-hover">
-                    <p>Block Studio©2021 Copyright.<br>All Rights Reserved.</p>
+                <div class="island copyright"
+                    style="background-image: url(assets/images/island/island--lg/copyright.png);">
+                    <div class="island-hover islanders-hover">
+                        <p>Block Studio©2021 Copyright.<br>All Rights Reserved.</p>
+                    </div>
                 </div>
+                <div class="island boat-1" style="background-image: url(assets/images/island/island--lg/boat-1.png);">
+                </div>
+                <div class="island boat-2" style="background-image: url(assets/images/island/island--lg/boat-2.png);">
+                </div>
+                <div class="island boat-3" style="background-image: url(assets/images/island/island--lg/boat-3.png);">
+                </div>
+                <!-- <div class="island boat-4" style="background-image: url(assets/images/island/island--lg/boat-3.png);"></div> -->
             </div>
-            <div class="island boat-1" style="background-image: url(assets/images/island/island--lg/boat-1.png);"></div>
-            <div class="island boat-2" style="background-image: url(assets/images/island/island--lg/boat-2.png);"></div>
-            <div class="island boat-3" style="background-image: url(assets/images/island/island--lg/boat-3.png);"></div>
-            <!-- <div class="island boat-4" style="background-image: url(assets/images/island/island--lg/boat-3.png);"></div> -->
         </div>
+
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js"></script>
+<script src="assets/js/main.js"></script>
 
 </html>
