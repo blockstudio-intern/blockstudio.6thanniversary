@@ -28,14 +28,14 @@ body {
   width: 35px;
   height: 35px;
   position: fixed;
-  z-index: 10000;
+  z-index: 9999;
 }
 
 .nav .time {
   position: fixed;
   margin: 20px;
   right: 0;
-  z-index: 10000;
+  z-index: 9999;
 }
 
 .nav .mini-map {
@@ -47,7 +47,7 @@ body {
   margin: 20px;
   bottom: 0;
   position: fixed;
-  z-index: 10000;
+  z-index: 9999;
   overflow: hidden;
 }
 
@@ -83,7 +83,7 @@ body {
   bottom: 0;
   right: 0;
   position: fixed;
-  z-index: 10000;
+  z-index: 9999;
 }
 
 .nav .celebrate-btn .celebrate-motion {
