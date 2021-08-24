@@ -1,19 +1,17 @@
 /* by Roizi */
 
-/* Coordinate
+
+/* Coordinate 
 document.getElementById("coords").addEventListener('mousemove', function(event) {
     var coordnum_x = (event.clientX*7 + 35600)/1000 ;
     var coordnum_y = (event.clientY*5 + 24500)/1000 ;
-    var coordimg_x = -15 + (event.clientX);
-    var coordimg_y = -15 + (event.clientY);
-    document.getElementById("Xbar").style.left = event.clientX + 'px';
-    document.getElementById("Ybar").style.top = event.clientY + 'px'; 
     document.getElementById("coord-num").innerHTML = coordnum_x  + 'ºE'  + '<br>' + coordnum_y + 'ºN'  ;
     document.getElementById("coord-num").style.left =  20 + event.clientX + 'px';
     document.getElementById("coord-num").style.top = 20 + event.clientY + 'px'; 
-    document.getElementById("a-cursor").style.left = coordimg_x + 'px';
-    document.getElementById("a-cursor").style.top = coordimg_y + 'px'; 
 }); */
+
+
+
 /* Show Time */
 function showTime() {
     var date = new Date();
@@ -53,11 +51,10 @@ var $container = $("#container");
 function update() {
     Draggable.create(".map", {
         bounds: $container,
-        edgeResistance: 0.65,
+        edgeResistance: 0.8,
         type: "x,y",
         throwProps: true,
         autoScroll: true,
     });
 }
-
 update();

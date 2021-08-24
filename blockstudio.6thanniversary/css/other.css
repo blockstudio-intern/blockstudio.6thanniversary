@@ -9,43 +9,75 @@ body {
 }
 /* coordinate */
 #coords {
+    border-radius: 50%;
     width: 100%;
     height: 100%;
     z-index: 99;
     position: fixed;
     -webkit-user-select: none;
     user-select: none;
+    pointer-events: none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 #coord-num {
-    z-index: 100;
+    /*z-index: 100;*/
     position: fixed;
     top: 0;
     left: 0;
-    font-family: en-nomal;
-    line-height: 18pt;
+    font-family: en-title;
+    line-height: 15pt;
+    color: gray;
     letter-spacing: 0.5pt;
-    font-size: 12pt;
+    font-size: 1pt;
+    pointer-events: none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 #Xbar, #Ybar {
-    position: absolute;
+    position: fixed;
+    pointer-events: none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 #Xbar {
     width: 100%;
     border-left: 1px dashed gray;
     top: 0;
     bottom: 0;
+    left: 50%;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 #Ybar {
-    left: 0;
     height: 100%;
     border-top: 1px dashed gray;
+    left: 0;
     right: 0;
+    top: 50%;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 #a-cursor {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    /*z-index: 99;*/
+    pointer-events: none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
 }
 /* End of coordinate */
 /* font setting */
@@ -123,14 +155,29 @@ body {
 .en-title{
     font-family: en-title;
 }
+h1{
+    font-family: en-title;
+    font-size: 58pt;
+    line-height: 90pt;
+}
+h2{
+    font-family: normal-title;
+    font-size: 24pt;
+    line-height: 36pt;
+}
 h3{
     font-family: normal-title;
     font-size: 16pt;
     line-height: 28pt;
 }
+p{
+    font-family: normal-font;
+    font-size: 12pt;
+    line-height: 20pt;
+}
 #TimeDisplay{
     font-family: en-title;
-    font-size: 16pt;
+    font-size: 12pt;
     line-height: 28pt;
 }
 /* End of font setting */
