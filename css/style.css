@@ -20,6 +20,11 @@ body {
   overflow: auto;
 }
 
+.nav .nav-item {
+  position: fixed;
+  z-index: 9999;
+}
+
 .nav .logo {
   background-position: center;
   background-repeat: no-repeat;
@@ -27,15 +32,11 @@ body {
   margin: 20px;
   width: 35px;
   height: 35px;
-  position: fixed;
-  z-index: 9999;
 }
 
 .nav .time {
-  position: fixed;
   margin: 20px;
   right: 0;
-  z-index: 9999;
 }
 
 .nav .mini-map {
@@ -43,8 +44,6 @@ body {
   height: 130px;
   margin: 20px;
   bottom: 0;
-  position: fixed;
-  z-index: 9999;
   overflow: hidden;
 }
 
@@ -89,8 +88,6 @@ body {
   margin-right: 10px;
   bottom: 0;
   right: 0;
-  position: fixed;
-  z-index: 9999;
 }
 
 .nav .celebrate-btn .celebrate-motion {
@@ -107,6 +104,33 @@ body {
   position: absolute;
   -webkit-animation: rotate 5s 0s linear infinite;
           animation: rotate 5s 0s linear infinite;
+}
+
+.nav .link {
+  width: 15px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-right: 20px;
+}
+
+.nav .link .icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
 }
 
 @-webkit-keyframes rotate {

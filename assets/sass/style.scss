@@ -31,31 +31,27 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-
 }
 .nav{
+  .nav-item{
+    position: fixed;
+    z-index: 9999;
+  }
   .logo{
     @include background(contain);
     margin: 20px;
     width: 35px;
     height: 35px;
-    position: fixed;
-    z-index: 9999;
   }
   .time{
-    position: fixed;
     margin: 20px;
-
     right: 0;
-    z-index: 9999;
   }
   .mini-map{
     width: 200px;
     height: 130px;
     margin: 20px;
     bottom: 0;
-    position: fixed;
-    z-index: 9999;
     overflow: hidden;
     .map-sm{
       position: absolute;
@@ -86,8 +82,7 @@ body {
     margin-right: 10px;
     bottom: 0;
     right: 0;
-    position: fixed;
-    z-index: 9999;
+    
     .celebrate-motion{
       @include background(contain);
       @include center;
@@ -98,6 +93,23 @@ body {
       // right: 0;
 
       animation: rotate 5s 0s linear infinite;;
+    }
+  }
+  .link{
+    width: 15px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin-right: 20px;
+    .icon{
+      @include background(contain);
+
+      width: 15px;
+      height: 15px;
     }
   }
 }
