@@ -82,7 +82,10 @@ body {
     margin-right: 10px;
     bottom: 0;
     right: 0;
-    
+    &:hover .celebrate-btn-hover{
+      opacity: 1;
+
+    }
     .celebrate-motion{
       @include background(contain);
       @include center;
@@ -93,6 +96,14 @@ body {
       // right: 0;
 
       animation: rotate 5s 0s linear infinite;;
+    }
+    .celebrate-btn-hover{
+      @include background(contain);
+      margin-bottom: 20px;
+      margin-right: 10px;
+      width: 150px;
+      height: 150px;
+      opacity: 0;
     }
   }
   .link{
@@ -110,7 +121,20 @@ body {
 
       width: 15px;
       height: 15px;
+      &:hover .icon-hover{
+      opacity: 1;
+      }
+      .icon-hover{
+        @include background(contain);
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        opacity: 0;
+
+        transition: all 0.2s;
+      }
     }
+    
   }
 }
 @keyframes rotate{

@@ -90,6 +90,10 @@ body {
   right: 0;
 }
 
+.nav .celebrate-btn:hover .celebrate-btn-hover {
+  opacity: 1;
+}
+
 .nav .celebrate-btn .celebrate-motion {
   background-position: center;
   background-repeat: no-repeat;
@@ -104,6 +108,17 @@ body {
   position: absolute;
   -webkit-animation: rotate 5s 0s linear infinite;
           animation: rotate 5s 0s linear infinite;
+}
+
+.nav .celebrate-btn .celebrate-btn-hover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  width: 150px;
+  height: 150px;
+  opacity: 0;
 }
 
 .nav .link {
@@ -131,6 +146,22 @@ body {
   background-size: contain;
   width: 15px;
   height: 15px;
+}
+
+.nav .link .icon:hover .icon-hover {
+  opacity: 1;
+}
+
+.nav .link .icon .icon-hover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 @-webkit-keyframes rotate {
