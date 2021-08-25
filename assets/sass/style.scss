@@ -30,6 +30,15 @@ body {
   width: 100%;
   overflow: auto;
 }
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
 // ** 隱藏滾動條 ** \\
 .wrapper {
   width: 100vw;
@@ -468,7 +477,7 @@ $light-gray: #d6d5d5;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -webkit-backdrop-filter: blur(20px) !important;
   backdrop-filter: blur(20px) !important;
 
@@ -560,33 +569,35 @@ $light-gray: #d6d5d5;
     }
   }
   .popup-container {
-    position: relative;
     @include center();
     width: calc(96% - 50px);
     height: 360px;
     overflow: hidden;
   }
   .popup-content {
-    display: grid;
-    grid-template-columns: 1fr 80px 2fr 160px 1fr 160px 1fr 160px 1fr;
-    // grid-gap: 160px;
-    // position: absolute;
-    left: 12%;
-    top: 50%;
-    transform: translate(0, -50%);
-    height: 360px;
-    width: 2000px;
+    position: absolute;
+    padding: 35vw 0 20vw 0;
+    height: 500%;
+    width: 360px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform-origin: right top;
+    transform: rotate(-90deg) translate3d(0, -100vh, 0);
+    .popup-item {
+      transform: rotate(90deg);
+    }
 
     .popup-intro {
       display: grid;
       grid-template-rows: 60% 40%;
       align-content: space-between;
-      height: 100%;
+      height: 360px;
+      margin-right: 80px;
+      right: -50px;
+
       .popup-title {
         color: #000;
-        position: relative;
-        // font-size: 9vw;
-        // margin: 70px 200px;
         animation: glitch 5s 5s 1;
         &::before {
           content: attr(data-text);
@@ -639,13 +650,14 @@ $light-gray: #d6d5d5;
       @include background(cover);
       grid-column: 3;
       // border: 1px solid #000;
-      height: 100%;
+      height: 360px;
       width: 640px;
       animation: pic-display 1.5s 1s;
-
+      left: -40%;
+      top: 160px;
       &::after {
         content: "";
-        height: 100%;
+        height: 360px;
         width: 640px;
         background-color: #000;
         position: absolute;
@@ -655,11 +667,16 @@ $light-gray: #d6d5d5;
       }
     }
     .popup-para {
+      display: block;
+      margin: 160px;
+      right: 45%;
+      top: 260px;
       border: 1px solid #000;
-      height: 100%;
+      height: 360px;
       width: 360px;
       &-1 {
         grid-column: 5;
+        // top: 260px;
       }
       &-2 {
         grid-column: 7;

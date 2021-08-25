@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="assets/vendor/nornalize_css/normalize.css">
     <link rel="stylesheet" href="./css/other.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- mini map -->
+    <script src="https://naver.github.io/egjs-axes/release/latest/dist/axes.pkgd.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js"></script>
     <!-- Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +26,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <!-- Start of Cursor -->
     <div id="coords">
@@ -74,7 +81,7 @@
         <!-- Start map -->
         <div id="imageView">
             <div class="map" id="rawImage" style="background-image: url(assets/images/grid.png);">
-                <a href="https://blockstudio-intern.github.io/blockstudio.6thanniversary/themain_island" class="island main-island"
+                <a href="/themain_island.html" class="island main-island"
                     style="background-image: url(assets/images/island/island--lg/the-main-island--lg.png);">
                     <div class="island--hover main-island--hover"
                         style="background-image: url(assets/images/landing-page/island--hover/the-main-island.png);">
@@ -198,17 +205,21 @@
         </div>
         <!-- End map -->
     </div>
+    <!-- js -->
+    <!-- <script>
+        $(document).ready(function () {
+            window.scrollTo(1200, 500);
+
+            // 设置滚动行为改为平滑的滚动
+            window.scrollTo({
+                top: 1000,
+                behavior: "instant"
+            });
+        });
+    </script> -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/template.js"></script>
+    
 </body>
-<!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<!-- mini map --> 
-<script src="https://naver.github.io/egjs-axes/release/latest/dist/axes.pkgd.js"></script>
-<!-- gsap -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js"></script>
-<!-- js -->
-<script src="assets/js/main.js"></script>
-<script src="assets/js/template.js"></script>
 
 </html>
