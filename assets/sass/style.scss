@@ -460,6 +460,7 @@ $light-gray: #d6d5d5;
     right: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba($color: #f7f7f7, $alpha: 0.5);
     -webkit-backdrop-filter: blur(20px) !important;
     backdrop-filter: blur(20px) !important;
 
@@ -671,9 +672,17 @@ $light-gray: #d6d5d5;
       margin: 160px;
       right: 45%;
       top: 260px;
-      border: 1px solid #000;
+      // border: 1px solid #000;
       height: 360px;
       width: 360px;
+      // h2 {
+      //   margin-bottom: 24px;
+      // }
+      p {
+        position: absolute;
+        top: 120px;
+        text-align: justify;
+      }
       &-1 {
         grid-column: 5;
         // top: 260px;

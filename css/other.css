@@ -147,7 +147,7 @@ body {
   src: url("../assets/font/Roboto-Light.ttf") format("truetype");
 }
 @font-face {
-  font-family: normal-font;
+  font-family: light-font;
   font-weight: 400;
   unicode-range: U+4E00-9FFF;
   font-display: swap;
@@ -183,6 +183,9 @@ body {
 .normal-title-en {
   font-family: normal-title-en;
 }
+.light-font {
+  font-family: light-font;
+}
 .normal-font {
   font-family: normal-font;
 }
@@ -198,7 +201,7 @@ h1 {
   line-height: 70pt;
 }
 h2 {
-  font-family: normal-title;
+  font-family: normal-title-en;
   font-size: 24pt;
   line-height: 36pt;
 }
@@ -213,9 +216,9 @@ h4 {
   line-height: 20pt;
 }
 p {
-  font-family: normal-font;
+  font-family: light-font;
   font-size: 12pt;
-  line-height: 20pt;
+  line-height: 24pt;
 }
 #TimeDisplay {
   font-family: en-title;
