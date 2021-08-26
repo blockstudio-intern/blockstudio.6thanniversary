@@ -5,6 +5,22 @@
   box-sizing: border-box;
   position: relative;
 }
+// ** 變數 ** \\
+$light-gray: #d6d5d5;
+$black: #000;
+$blue: #0f4c81;
+
+@mixin background($size) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+@mixin center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 h1,
 h2,
 h3,
@@ -12,6 +28,10 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+a {
+  // text-decoration: none;
+  color: $blue;
 }
 // ** 隱藏滾動條 ** \\
 html {
@@ -44,20 +64,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-// ** 變數 ** \\
-$light-gray: #d6d5d5;
 
-@mixin background($size) {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: $size;
-}
-@mixin center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 /* -------------------------- *\
 	Nav
 \* -------------------------- */
@@ -434,42 +441,32 @@ $light-gray: #d6d5d5;
 /* -------------------------- *\
 	Popup
 \* -------------------------- */
-@keyframes popup {
-  0% {
-    position: absolute;
-    top: 105%;
-    left: 50%;
-    transform: translate(-50%, 0);
 
-    opacity: 0;
-    width: 0%;
-    height: 0%;
-    background-color: #000;
-  }
-  10% {
-    opacity: 0;
-  }
-  90% {
-    background-color: #000;
-  }
-  100% {
+// ** Component **\\
+.popup-title {
+  color: #000;
+  animation: glitch 5s 5s 1;
+  &::before {
+    content: attr(data-text);
     position: absolute;
-    left: 0;
+    left: -2px;
+    text-shadow: -5px 0 #00fff0;
+    // background: black;
+    overflow: hidden;
     top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: #f7f7f7, $alpha: 0.5);
-    -webkit-backdrop-filter: blur(20px) !important;
-    backdrop-filter: blur(20px) !important;
-
-    z-index: 10000;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    opacity: 1;
+    animation: noise-1 3s linear 2 alternate-reverse, glitch 4.5s 5.05s 2,
+      disappear 0.3s 5s both;
+  }
+  &:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -5px 0 #ff8a00;
+    // background: black;
+    overflow: hidden;
+    top: 0;
+    animation: noise-2 3s linear 2 alternate-reverse, glitch 4.5s 5s 2,
+      disappear 0.3s 6s both;
   }
 }
 
@@ -482,20 +479,20 @@ $light-gray: #d6d5d5;
   -webkit-backdrop-filter: blur(20px) !important;
   backdrop-filter: blur(20px) !important;
 
-  z-index: 10000;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  // perspective: 1000;
   opacity: 0;
+  z-index: 100;
 
   animation: popup 0.1s ease-out 1.2s both,
     noise-1 1s linear 2 alternate-reverse, glitch-2 5s 1.5s 2;
 
   .frame-item {
     @include background(cover);
-    position: absolute;
+    position: fixed;
     animation: display 0.3s 1.3s both;
+    z-index: 10001;
   }
   .frame-l {
     left: 2%;
@@ -535,6 +532,8 @@ $light-gray: #d6d5d5;
     align-content: center;
     grid-gap: 20px;
     height: 40px;
+    z-index: 12000;
+
     .popup-island {
       @include background(contain);
       width: 40px;
@@ -574,126 +573,185 @@ $light-gray: #d6d5d5;
     width: calc(96% - 50px);
     height: 360px;
     overflow: hidden;
-  }
-  .popup-content {
-    position: absolute;
-    padding: 35vw 0 20vw 0;
-    height: 500%;
-    width: 360px;
+    .popup-content {
+      position: absolute;
+      padding: 35vw 0 20vw 0;
+      height: 500%;
+      width: 360px;
 
-    overflow-y: auto;
-    overflow-x: hidden;
-    transform-origin: right top;
-    transform: rotate(-90deg) translate3d(0, -100vh, 0);
-    .popup-item {
-      transform: rotate(90deg);
-    }
-
-    .popup-intro {
-      display: grid;
-      grid-template-rows: 60% 40%;
-      align-content: space-between;
-      height: 360px;
-      margin-right: 80px;
-      right: -50px;
-
-      .popup-title {
-        color: #000;
-        animation: glitch 5s 5s 1;
-        &::before {
-          content: attr(data-text);
-          position: absolute;
-          left: -2px;
-          text-shadow: -5px 0 #00fff0;
-          // background: black;
-          overflow: hidden;
-          top: 0;
-          animation: noise-1 3s linear 2 alternate-reverse, glitch 4.5s 5.05s 2,
-            disappear 0.3s 5s both;
-        }
-        &:after {
-          content: attr(data-text);
-          position: absolute;
-          left: 2px;
-          text-shadow: -5px 0 #ff8a00;
-          // background: black;
-          overflow: hidden;
-          top: 0;
-          animation: noise-2 3s linear 2 alternate-reverse, glitch 4.5s 5s 2,
-            disappear 0.3s 6s both;
-        }
+      overflow-y: auto;
+      overflow-x: hidden;
+      transform-origin: right top;
+      transform: rotate(-90deg) translate3d(0, -100vh, 0);
+      .popup-item {
+        transform: rotate(90deg);
       }
 
-      .scroll {
-        width: 130px;
-        height: 130px;
-        justify-self: end;
-        align-self: flex-end;
-        .scroll-icon {
-          @include center();
-          @include background(contain);
-          width: 40.5px;
-          height: 67.5px;
-        }
+      .popup-intro {
+        display: grid;
+        grid-template-rows: 60% 40%;
+        align-content: space-between;
+        height: 360px;
+        margin-right: 80px;
+        right: -50px;
 
-        .scroll-motion {
-          @include background(contain);
-          position: absolute;
-          @include center();
-
+        .scroll {
           width: 130px;
           height: 130px;
-          animation: rotate 5s 0s linear infinite;
+          justify-self: end;
+          align-self: flex-end;
+          .scroll-icon {
+            @include center();
+            @include background(contain);
+            width: 40.5px;
+            height: 67.5px;
+          }
+
+          .scroll-motion {
+            @include background(contain);
+            position: absolute;
+            @include center();
+
+            width: 130px;
+            height: 130px;
+            animation: rotate 5s 0s linear infinite;
+          }
+        }
+      }
+      .popup-pic {
+        @include background(cover);
+        grid-column: 3;
+        // border: 1px solid #000;
+        height: 360px;
+        width: 640px;
+        animation: pic-display 1.5s 1s;
+        left: -40%;
+        top: 160px;
+        &::after {
+          content: "";
+          height: 360px;
+          width: 640px;
+          background-color: #000;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: picture 1s linear 1.5s both;
+        }
+      }
+      .popup-para {
+        display: block;
+        margin: 160px;
+        right: 45%;
+        top: 260px;
+        // border: 1px solid #000;
+        height: 360px;
+        width: 360px;
+        // h2 {
+        //   margin-bottom: 24px;
+        // }
+        p {
+          position: absolute;
+          top: 120px;
+          text-align: justify;
+        }
+        &-1 {
+          grid-column: 5;
+          // top: 260px;
+        }
+        &-2 {
+          grid-column: 7;
+        }
+        &-3 {
+          grid-column: 9;
         }
       }
     }
-    .popup-pic {
-      @include background(cover);
-      grid-column: 3;
-      // border: 1px solid #000;
-      height: 360px;
-      width: 640px;
-      animation: pic-display 1.5s 1s;
-      left: -40%;
-      top: 160px;
-      &::after {
-        content: "";
+  }
+  .popup-container-nl {
+    @include center();
+    width: calc(96% - 50px);
+    height: 360px;
+    .popup-content {
+      @include center();
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .popup-pic {
+        @include background(cover);
+
         height: 360px;
         width: 640px;
-        background-color: #000;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: picture 1s linear 1.5s both;
+        animation: pic-display 1.5s 1s;
+        &::after {
+          content: "";
+          height: 360px;
+          width: 640px;
+          background-color: #000;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: picture 1s linear 1.5s both;
+        }
+      }
+      .popup-intro {
+        margin-left: 80px;
+        p {
+          position: absolute;
+          top: 60px;
+          text-align: justify;
+        }
+        .link {
+          position: absolute;
+          top: 100%;
+          transform: translate(0, -100%);
+        }
       }
     }
-    .popup-para {
-      display: block;
-      margin: 160px;
-      right: 45%;
-      top: 260px;
-      // border: 1px solid #000;
-      height: 360px;
-      width: 360px;
-      // h2 {
-      //   margin-bottom: 24px;
-      // }
-      p {
-        position: absolute;
-        top: 120px;
-        text-align: justify;
-      }
-      &-1 {
-        grid-column: 5;
-        // top: 260px;
-      }
-      &-2 {
-        grid-column: 7;
-      }
-      &-3 {
-        grid-column: 9;
-      }
-    }
+  }
+}
+
+/* -------------------------- *\
+	Keyframes
+\* -------------------------- */
+
+@keyframes popup {
+  0% {
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    background-color: #000;
+  }
+  10% {
+    opacity: 0;
+  }
+  90% {
+    background-color: #000;
+  }
+  100% {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #f7f7f7, $alpha: 0.5);
+    -webkit-backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(20px) !important;
+
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    opacity: 1;
   }
 }
 
@@ -778,4 +836,9 @@ $light-gray: #d6d5d5;
     height: 100%;
     background-color: #000;
   }
+}
+canvas {
+  @include center;
+  z-index: 10000;
+  animation: display 0.3s 1.3s both;
 }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <link rel=”shortcut icon” href=”./favicon.ico”>
+    <title>版塊Block Studio 六週年線上展 | Block Studio</title>
+    <!-- CSS/JS -->
+    <link rel="stylesheet" href="assets/vendor/nornalize_css/normalize.css">
+    <link rel="stylesheet" href="./css/other.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- mini map -->
+    <script src="https://naver.github.io/egjs-axes/release/latest/dist/axes.pkgd.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    
+    <!-- Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading -->
+
+    <div class="wrapper" id="container">
+        <!-- Start Nav -->
+        <div class="nav">
+            <a href="https://blockstudio.tw/"><div class="nav-item logo" style="background-image: url(assets/images/logo--sm.png);"></div></a>
+            <div id="TimeDisplay" class="nav-item time" onload="showTime()"></div>
+            <div class="nav-item mini-map">
+                <div class="map-sm" id="minimap" style="background-image: url(assets/images/landing-page/map-sm.png);">
+                    <div class="map-dot" id="minimap-pointer"></div>
+                </div>
+                <div class="map-fence" style="background-image: url(assets/images/landing-page/map-outline.png);"></div>
+            </div>
+            <div class="nav-item celebrate-btn"
+                style="background-image: url(assets/images/landing-page/btn/btn-celebrate.png);">
+                <div class="celebrate-motion" style="background-image: url(assets/images/landing-page/btn/happy.png);">
+                </div>
+                <div class="celebrate-btn-hover"
+                    style="background-image: url(assets/images/landing-page/btn/btn-celebrate--hover.png);"></div>
+            </div>
+            <div class="nav-item link">
+                <div href="https://www.facebook.com/blockstudiotw" class="icon"
+                    style="background-image: url(assets/images/landing-page/icons/facebook.png);">
+                    <a href="https://www.facebook.com/blockstudiotw" class="icon-hover"
+                        style="background-image: url(assets/images/landing-page/icons/facebook--hover.png);">
+                    </a>
+                </div>
+                <div href="https://www.instagram.com/blockstudiotw/" class="icon"
+                    style="background-image: url(assets/images/landing-page/icons/instagram.png);">
+                    <a href="https://www.facebook.com/blockstudiotw" class="icon-hover"
+                        style="background-image: url(assets/images/landing-page/icons/instagram--hover.png);">
+                    </a>
+                </div>
+                <div href="https://blockstudio.tw/" class="icon"
+                    style="background-image: url(assets/images/landing-page/icons/official-website.png);">
+                    <a href="https://www.facebook.com/blockstudiotw" class="icon-hover"
+                        style="background-image: url(assets/images/landing-page/icons/official-website--hover.png);">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End Nav -->
+        <!-- Container -->
+        <!--<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/591967711?background=1&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=c9c8562ce2" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="main-island"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>-->
+        <div class="video-container">
+            <video class="video" width="100%" preload="auto" autoplay="true">
+                <source src="assets/mp4/project06.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- Start popup -->
+        <div class="popup main-island-popup">
+            <div class="popup-nav">
+                <div class="popup-island"
+                    style="background-image: url(assets/images/island/island--sm/projects-island-1--sm.png);"></div>
+                <h4>Projects Island - 1</h4>
+                <div class="close-btn" style="background-image: url(assets/images/popup/icon/btn-close.png);">
+                    <a href="index.html" class="close-btn--hover" style="background-image: url(assets/images/popup/icon/btn-close--hover.png);">
+                    </a>
+                </div>
+            </div>
+            <div class="popup-container-nl">
+                <div class="popup-content">
+                    <section class="popup-item popup-pic" style="background-image: url(assets/images/popup/Section_1.jpeg);">
+                    </section>
+                    <section class="popup-item popup-intro">
+                        <h1 class="popup-title zh-subtitle" data-text="TDRI台灣設計研究院" >TDRI台灣設計研究院</h1>
+                        <p>抓住關鍵字「品牌的連貫性」、「帶點趣味吸睛巧思」、身為設計產業的領導組織，在網站方便必須表現出「敢於挑戰、勇於嘗試的領頭羊角色」。
+                        全站以品牌識別之洞見兩個球體概念出發，圖像化、動態化「建立」、「驅動」、「推動」、「連結」、「擴散」等幾個大目標。</p>
+                        <p class="link en-normal">Website － <a href="tdri.org.tw/about">tdri.org.tw/about</a></p>
+                    </section>
+                    
+                </div>
+            </div>  
+            <div class="frame-item frame-l" style="background-image: url(assets/images/popup/frame-l.png);"></div>
+            <div class="frame-item frame-t" style="background-image: url(assets/images/popup/frame-t.png);"></div>
+            <div class="frame-item frame-r" style="background-image: url(assets/images/popup/frame-r.png);"></div>
+            <div class="frame-item frame-b" style="background-image: url(assets/images/popup/frame-b.png);"></div>
+        </div>
+        <!-- End popup -->
+</body>
+</html>
