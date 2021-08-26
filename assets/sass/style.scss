@@ -39,8 +39,7 @@ html {
   height: 100%;
   // width: 100%;
 }
-
-body::-webkit-scrollbar {
+scrollbar {
   display: none;
 }
 
@@ -577,6 +576,8 @@ body {
       width: 40px;
       height: 40px;
       grid-column: 1;
+      justify-self: center;
+      align-self: center;
     }
     h4 {
       color: $light-gray;
@@ -755,6 +756,17 @@ body {
           width: 360px;
           height: 360px;
           z-index: -2;
+          animation: pic-display 3s 1s;
+          &::after {
+            content: "";
+            height: 360px;
+            width: 360px;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: picture 1s linear 3s both;
+          }
         }
         h1 {
           -webkit-text-stroke: 1px black; /* width and color */
