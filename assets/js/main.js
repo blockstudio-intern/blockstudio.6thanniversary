@@ -38,9 +38,9 @@ showTime();
 var $container = $("#container");
 
 function update() {
-    Draggable.create(".map", {
+    Draggable.create(".map-wrapper", {
         bounds: $container,
-        edgeResistance: 0.65,
+        edgeResistance: 0.5,
         type: "x,y",
         throwProps: true,
         autoScroll: true,
@@ -52,8 +52,8 @@ update();
 //mini-map//
 $(function () {
     // raw-image 1280 * 1677
-    const RAW_IMAGE_WIDTH = 3100;
-    const RAW_IMAGE_HEIGHT = 2500;
+    const RAW_IMAGE_WIDTH = 7000;
+    const RAW_IMAGE_HEIGHT = 5000;
     // mini-map 128 * 167.7
     const MINIMAP_WIDTH = 10;
     const IMAGE_RATE = RAW_IMAGE_HEIGHT / RAW_IMAGE_WIDTH;

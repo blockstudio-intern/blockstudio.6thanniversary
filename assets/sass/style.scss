@@ -62,6 +62,247 @@ body {
 .wrapper {
   width: 100vw;
   height: 100vh;
+  .map-wrapper {
+    width: 300vw;
+    height: 200vw;
+    @include background(cover);
+    z-index: 10001;
+    .island--hover {
+      margin: -2vw;
+      width: 22vw;
+      height: 12vw;
+      @include background(contain);
+      position: absolute;
+      opacity: 0;
+
+      transition: all 0.3s;
+    }
+    .island {
+      @include background(contain);
+      position: absolute;
+
+      &:hover .island--hover {
+        opacity: 1;
+        margin: 0px;
+      }
+      &.main-island {
+        width: 48vw;
+        height: 30vw;
+        @include center;
+        .main-island--hover {
+          left: 0%;
+          top: 70%;
+        }
+      }
+      &.memorial-island {
+        width: 21vw;
+        height: 18vw;
+
+        left: 60%;
+        top: 57%;
+        .memorial-island--hover {
+          left: -9vw;
+          top: 10vw;
+        }
+      }
+      &.bens-party {
+        width: 18vw;
+        height: 12vw;
+        left: 55%;
+        top: 35%;
+        .bens-party--hover {
+          left: -12vw;
+          top: 6vw;
+        }
+      }
+      &.projects-island-1 {
+        width: 36vw;
+        height: 36vw;
+        left: 9%;
+        top: 47%;
+
+        .projects-island--hover {
+          left: -30%;
+          top: 80%;
+        }
+      }
+      &.projects-island-2 {
+        width: 18vw;
+        height: 12vw;
+        left: 33%;
+        top: 67%;
+
+        .projects-island--hover {
+          left: -8vw;
+          top: 7vw;
+        }
+      }
+      &.projects-island-3 {
+        width: 12vw;
+        height: 10vw;
+        left: 25%;
+        top: 66%;
+        .projects-island--hover {
+          left: -10vw;
+          top: 6vw;
+        }
+      }
+      &.projects-island-4 {
+        width: 15vw;
+        height: 12vw;
+        left: 50%;
+        top: 71%;
+        .projects-island--hover {
+          left: -10vw;
+          top: 6vw;
+        }
+      }
+      &.projects-island-5 {
+        width: 16vw;
+        height: 12vw;
+        left: 74%;
+        top: 62%;
+        .projects-island--hover {
+          left: -8vw;
+          top: 7vw;
+        }
+      }
+      &.projects-island-6 {
+        width: 24vw;
+        height: 18vw;
+        left: 83%;
+        top: 53%;
+        .projects-island--hover {
+          left: -8vw;
+          top: 9vw;
+        }
+      }
+      &.projects-island-7 {
+        width: 15vw;
+        height: 12vw;
+        left: 70%;
+        top: 45%;
+        .projects-island--hover {
+          left: -10vw;
+          top: 6vw;
+        }
+      }
+      &.projects-island-8 {
+        width: 24vw;
+        height: 18vw;
+        left: 68%;
+        top: 20%;
+        .projects-island--hover {
+          left: -9vw;
+          top: 12vw;
+        }
+      }
+      &.projects-island-9 {
+        width: 14vw;
+        height: 12vw;
+        left: 40%;
+        top: 15%;
+        .projects-island--hover {
+          left: -70%;
+          top: 60%;
+        }
+      }
+      &.projects-island-10 {
+        width: 18vw;
+        height: 14vw;
+        left: 30%;
+        top: 50%;
+        .projects-island--hover {
+          left: -9vw;
+          top: 7vw;
+        }
+      }
+      &.islanders-1 {
+        width: 22vw;
+        height: 16vw;
+        left: 30%;
+        top: 27%;
+        .islanders--hover {
+          left: -70%;
+          top: 80%;
+        }
+      }
+      &.islanders-2 {
+        width: 18vw;
+        height: 15vw;
+        left: 30%;
+        top: 80%;
+        .islanders--hover {
+          left: -12vw;
+          top: 10vw;
+        }
+      }
+      &.islanders-3 {
+        width: 16vw;
+        height: 12vw;
+        left: 65%;
+        top: 75%;
+        .islanders--hover {
+          left: -14vw;
+          top: 9vw;
+        }
+      }
+      &.islanders-4 {
+        width: 20vw;
+        height: 14vw;
+        left: 87%;
+        top: 33%;
+        .islanders--hover {
+          left: -15vw;
+          top: 10vw;
+        }
+      }
+      &.islanders-5 {
+        width: 18vw;
+        height: 10vw;
+        left: 50%;
+        top: 19%;
+        .islanders--hover {
+          left: -14vw;
+          top: 7vw;
+        }
+      }
+      &.copyright {
+        width: 14vw;
+        height: 9vw;
+        left: 48%;
+        top: 88%;
+        .islanders--hover {
+          left: 121%;
+          top: -10%;
+        }
+      }
+      &.boat-1 {
+        width: 20vw;
+        height: 9vw;
+        left: 16%;
+        top: 59%;
+      }
+      &.boat-2 {
+        width: 18vw;
+        height: 9vw;
+        left: 77%;
+        top: 78%;
+      }
+      &.boat-3 {
+        width: 19vw;
+        height: 19vw;
+        left: 76%;
+        top: 34%;
+      }
+      &.boat-4 {
+        width: 18vw;
+        height: 9vw;
+        left: 16%;
+        top: 62%;
+      }
+    }
+  }
 }
 
 /* -------------------------- *\
@@ -188,244 +429,9 @@ body {
   overflow: hidden;
 }
 .map {
-  width: 3000px;
-  height: 2000px;
-  @include background(cover);
-  .island--hover {
-    margin: -20px;
-    width: 220px;
-    height: 120px;
-    @include background(contain);
-    position: absolute;
-    opacity: 0;
-
-    transition: all 0.3s;
-  }
-  .island {
-    @include background(contain);
-    position: absolute;
-
-    &:hover .island--hover {
-      opacity: 1;
-      margin: 0px;
-    }
-    &.main-island {
-      width: 480px;
-      height: 300px;
-      @include center;
-      .main-island--hover {
-        left: 0%;
-        top: 70%;
-      }
-    }
-    &.memorial-island {
-      width: 216px;
-      height: 180px;
-
-      left: 60%;
-      top: 57%;
-      .memorial-island--hover {
-        left: -96px;
-        top: 108px;
-      }
-    }
-    &.bens-party {
-      width: 180px;
-      height: 120px;
-      left: 53%;
-      top: 30%;
-      .bens-party--hover {
-        left: -120px;
-        top: 60px;
-      }
-    }
-    &.projects-island-1 {
-      width: 360px;
-      height: 360px;
-      left: 9%;
-      top: 47%;
-
-      .projects-island--hover {
-        left: -30%;
-        top: 80%;
-      }
-    }
-    &.projects-island-2 {
-      width: 180px;
-      height: 121px;
-      left: 33%;
-      top: 60%;
-
-      .projects-island--hover {
-        left: -84px;
-        top: 72px;
-      }
-    }
-    &.projects-island-3 {
-      width: 120px;
-      height: 108px;
-      left: 25%;
-      top: 66%;
-      .projects-island--hover {
-        left: -108px;
-        top: 60px;
-      }
-    }
-    &.projects-island-4 {
-      width: 156px;
-      height: 120px;
-      left: 43%;
-      top: 70%;
-      .projects-island--hover {
-        left: -108px;
-        top: 60px;
-      }
-    }
-    &.projects-island-5 {
-      width: 168px;
-      height: 121px;
-      left: 80%;
-      top: 65%;
-      .projects-island--hover {
-        left: -84px;
-        top: 72px;
-      }
-    }
-    &.projects-island-6 {
-      width: 240px;
-      height: 180px;
-      left: 83%;
-      top: 53%;
-      .projects-island--hover {
-        left: -84px;
-        top: 96px;
-      }
-    }
-    &.projects-island-7 {
-      width: 156px;
-      height: 120px;
-      left: 74%;
-      top: 45%;
-      .projects-island--hover {
-        left: -108px;
-        top: 60px;
-      }
-    }
-    &.projects-island-8 {
-      width: 240px;
-      height: 180px;
-      left: 68%;
-      top: 20%;
-      .projects-island--hover {
-        left: -96px;
-        top: 121px;
-      }
-    }
-    &.projects-island-9 {
-      width: 144px;
-      height: 120px;
-      left: 40%;
-      top: 15%;
-      .projects-island--hover {
-        left: -70%;
-        top: 60%;
-      }
-    }
-    &.projects-island-10 {
-      width: 180px;
-      height: 144px;
-      left: 34%;
-      top: 35%;
-      .projects-island--hover {
-        left: -96px;
-        top: 72px;
-      }
-    }
-    &.islanders-1 {
-      width: 228px;
-      height: 168px;
-      left: 23%;
-      top: 23%;
-      .islanders--hover {
-        left: -70%;
-        top: 80%;
-      }
-    }
-    &.islanders-2 {
-      width: 180px;
-      height: 156px;
-      left: 30%;
-      top: 80%;
-      .islanders--hover {
-        left: -121px;
-        top: 108px;
-      }
-    }
-    &.islanders-3 {
-      width: 160px;
-      height: 121px;
-      left: 65%;
-      top: 75%;
-      .islanders--hover {
-        left: -144px;
-        top: 90px;
-      }
-    }
-    &.islanders-4 {
-      width: 204px;
-      height: 144px;
-      left: 87%;
-      top: 33%;
-      .islanders--hover {
-        left: -156px;
-        top: 108px;
-      }
-    }
-    &.islanders-5 {
-      width: 180px;
-      height: 108px;
-      left: 55%;
-      top: 10%;
-      .islanders--hover {
-        left: -144px;
-        top: 72px;
-      }
-    }
-    &.copyright {
-      width: 144px;
-      height: 96px;
-      left: 48%;
-      top: 88%;
-      .islanders--hover {
-        left: 121%;
-        top: -10%;
-      }
-    }
-    &.boat-1 {
-      width: 204px;
-      height: 96px;
-      left: 16%;
-      top: 59%;
-    }
-    &.boat-2 {
-      width: 180px;
-      height: 96px;
-      left: 77%;
-      top: 78%;
-    }
-    &.boat-3 {
-      width: 192px;
-      height: 192px;
-      left: 76%;
-      top: 34%;
-    }
-    &.boat-4 {
-      width: 180px;
-      height: 96px;
-      left: 16%;
-      top: 62%;
-    }
-  }
+  width: 3600px;
+  height: 2400px;
+  // @include background(cover);
 }
 /* -------------------------- *\
 	Video
@@ -926,4 +932,7 @@ canvas {
   @include center;
   z-index: 10000;
   animation: display 0.3s 1.3s both;
+}
+#imageView {
+  z-index: -1;
 }
