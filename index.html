@@ -209,11 +209,12 @@
     </div>
     <!-- js -->
     <script>
-        $(document).ready(function () {
-            
-            TweenLite.to(window, 1, { scrollTo: { y: "#container", offsetY: $(window).innerHeight() / 2 - $('#container').height() / 2, x: "#container", offsetX: $(window).innerWidth() / 2 - $('#container').width() / 2, autoKill: false, behavior: 'smooth' } }, 100);
-            
-        });
+        const rawImage = document.querySelector('#rawImage')
+            const width = rawImage.clientWidth
+            const height = rawImage.clientHeight
+            const diffX = window.innerWidth - width
+            const diffY = window.innerHeight - height
+            rawImage.style.transform = `translate3d(${diffX / 2}px, ${diffY / 2}px, 0)`
     </script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/template.js"></script>
