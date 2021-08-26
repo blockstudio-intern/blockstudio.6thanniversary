@@ -469,7 +469,45 @@ body {
       disappear 0.3s 6s both;
   }
 }
+.scroll {
+  width: 130px;
+  height: 130px;
+  justify-self: end;
+  align-self: flex-end;
+  .scroll-icon {
+    @include center();
+    @include background(contain);
+    width: 40.5px;
+    height: 67.5px;
+  }
 
+  .scroll-motion {
+    @include background(contain);
+    position: absolute;
+    @include center();
+
+    width: 130px;
+    height: 130px;
+    animation: rotate 5s 0s linear infinite;
+  }
+}
+.popup-pic {
+  @include background(cover);
+
+  height: 360px;
+  width: 640px;
+  animation: pic-display 1.5s 1s;
+  &::after {
+    content: "";
+    height: 360px;
+    width: 640px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: picture 1s linear 1.5s both;
+  }
+}
 .popup {
   position: absolute;
   left: 0;
@@ -594,49 +632,10 @@ body {
         height: 360px;
         margin-right: 80px;
         right: -50px;
-
-        .scroll {
-          width: 130px;
-          height: 130px;
-          justify-self: end;
-          align-self: flex-end;
-          .scroll-icon {
-            @include center();
-            @include background(contain);
-            width: 40.5px;
-            height: 67.5px;
-          }
-
-          .scroll-motion {
-            @include background(contain);
-            position: absolute;
-            @include center();
-
-            width: 130px;
-            height: 130px;
-            animation: rotate 5s 0s linear infinite;
-          }
-        }
       }
       .popup-pic {
-        @include background(cover);
-        grid-column: 3;
-        // border: 1px solid #000;
-        height: 360px;
-        width: 640px;
-        animation: pic-display 1.5s 1s;
         left: -40%;
         top: 160px;
-        &::after {
-          content: "";
-          height: 360px;
-          width: 640px;
-          background-color: #000;
-          position: absolute;
-          top: 0;
-          left: 0;
-          animation: picture 1s linear 1.5s both;
-        }
       }
       .popup-para {
         display: block;
@@ -706,6 +705,80 @@ body {
           position: absolute;
           top: 100%;
           transform: translate(0, -100%);
+        }
+      }
+    }
+  }
+  .popup-container-mi {
+    @include center();
+    width: calc(96% - 50px);
+    height: 360px;
+    overflow: hidden;
+    .popup-content {
+      position: absolute;
+      padding: 35vw 0 20vw 0;
+      height: 500%;
+      width: 360px;
+
+      overflow-y: auto;
+      overflow-x: hidden;
+      transform-origin: right top;
+      transform: rotate(-90deg) translate3d(0, -100vh, 0);
+      .popup-item {
+        transform: rotate(90deg);
+      }
+
+      .popup-intro {
+        display: grid;
+        grid-template-rows: 60% 40%;
+        align-content: space-between;
+        height: 360px;
+        margin-right: 80px;
+        right: -50px;
+      }
+      .popup-pic {
+        left: -780%;
+        top: 215vw;
+        height: 5px;
+        width: 6000px;
+      }
+      .popup-para {
+        display: block;
+        margin: 460px;
+        right: 166%;
+        top: 50vw;
+        // border: 1px solid #000;
+        height: 360px;
+        width: 640px;
+        .para_pic {
+          @include background(cover);
+          width: 360px;
+          height: 360px;
+          z-index: -2;
+        }
+        h1 {
+          -webkit-text-stroke: 1px black; /* width and color */
+          position: absolute;
+          top: 10%;
+          right: 25%;
+          color: #fff;
+
+          &::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            color: $black;
+            -webkit-text-stroke: 1px black; /* width and color */
+            z-index: -1;
+          }
+        }
+        p {
+          position: absolute;
+          top: 55%;
+          left: 60%;
+          text-align: justify;
+          width: 200px;
         }
       }
     }
