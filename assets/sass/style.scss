@@ -63,8 +63,8 @@ body {
   width: 100vw;
   height: 100vh;
   .map-wrapper {
-    width: 300vw;
-    height: 200vw;
+    width: 360vw;
+    height: 240vw;
     @include background(cover);
     .island--hover {
       margin: -2vw;
@@ -97,7 +97,7 @@ body {
         width: 21vw;
         height: 18vw;
 
-        left: 60%;
+        left: 55%;
         top: 57%;
         .memorial-island--hover {
           left: -9vw;
@@ -108,7 +108,7 @@ body {
         width: 18vw;
         height: 12vw;
         left: 55%;
-        top: 35%;
+        top: 40%;
         .bens-party--hover {
           left: -12vw;
           top: 6vw;
@@ -117,8 +117,8 @@ body {
       &.projects-island-1 {
         width: 36vw;
         height: 36vw;
-        left: 9%;
-        top: 47%;
+        left: 19%;
+        top: 40%;
 
         .projects-island--hover {
           left: -30%;
@@ -128,8 +128,8 @@ body {
       &.projects-island-2 {
         width: 18vw;
         height: 12vw;
-        left: 33%;
-        top: 67%;
+        left: 34%;
+        top: 63%;
 
         .projects-island--hover {
           left: -8vw;
@@ -149,8 +149,8 @@ body {
       &.projects-island-4 {
         width: 15vw;
         height: 12vw;
-        left: 50%;
-        top: 71%;
+        left: 45%;
+        top: 68%;
         .projects-island--hover {
           left: -10vw;
           top: 6vw;
@@ -159,7 +159,7 @@ body {
       &.projects-island-5 {
         width: 16vw;
         height: 12vw;
-        left: 74%;
+        left: 66%;
         top: 62%;
         .projects-island--hover {
           left: -8vw;
@@ -169,7 +169,7 @@ body {
       &.projects-island-6 {
         width: 24vw;
         height: 18vw;
-        left: 83%;
+        left: 65%;
         top: 53%;
         .projects-island--hover {
           left: -8vw;
@@ -179,8 +179,8 @@ body {
       &.projects-island-7 {
         width: 15vw;
         height: 12vw;
-        left: 70%;
-        top: 45%;
+        left: 65%;
+        top: 43%;
         .projects-island--hover {
           left: -10vw;
           top: 6vw;
@@ -189,8 +189,8 @@ body {
       &.projects-island-8 {
         width: 24vw;
         height: 18vw;
-        left: 68%;
-        top: 20%;
+        left: 57%;
+        top: 25%;
         .projects-island--hover {
           left: -9vw;
           top: 12vw;
@@ -199,17 +199,17 @@ body {
       &.projects-island-9 {
         width: 14vw;
         height: 12vw;
-        left: 40%;
-        top: 15%;
+        left: 43%;
+        top: 35%;
         .projects-island--hover {
-          left: -70%;
+          left: -73%;
           top: 60%;
         }
       }
       &.projects-island-10 {
         width: 18vw;
         height: 14vw;
-        left: 30%;
+        left: 35%;
         top: 50%;
         .projects-island--hover {
           left: -9vw;
@@ -229,8 +229,8 @@ body {
       &.islanders-2 {
         width: 18vw;
         height: 15vw;
-        left: 30%;
-        top: 80%;
+        left: 35%;
+        top: 75%;
         .islanders--hover {
           left: -12vw;
           top: 10vw;
@@ -239,7 +239,7 @@ body {
       &.islanders-3 {
         width: 16vw;
         height: 12vw;
-        left: 65%;
+        left: 60%;
         top: 75%;
         .islanders--hover {
           left: -14vw;
@@ -249,8 +249,8 @@ body {
       &.islanders-4 {
         width: 20vw;
         height: 14vw;
-        left: 87%;
-        top: 33%;
+        left: 77%;
+        top: 51%;
         .islanders--hover {
           left: -15vw;
           top: 10vw;
@@ -259,8 +259,8 @@ body {
       &.islanders-5 {
         width: 18vw;
         height: 10vw;
-        left: 50%;
-        top: 19%;
+        left: 45%;
+        top: 23%;
         .islanders--hover {
           left: -14vw;
           top: 7vw;
@@ -270,7 +270,7 @@ body {
         width: 14vw;
         height: 9vw;
         left: 48%;
-        top: 88%;
+        top: 80%;
         .islanders--hover {
           left: 121%;
           top: -10%;
@@ -285,14 +285,14 @@ body {
       &.boat-2 {
         width: 18vw;
         height: 9vw;
-        left: 77%;
-        top: 78%;
+        left: 65%;
+        top: 70%;
       }
       &.boat-3 {
         width: 19vw;
         height: 19vw;
-        left: 76%;
-        top: 34%;
+        left: 70%;
+        top: 40%;
       }
       &.boat-4 {
         width: 18vw;
@@ -360,12 +360,17 @@ body {
     &:hover .celebrate-btn--hover {
       opacity: 1;
     }
+    &:hover .celebrate-motion {
+      z-index: 10001;
+      top: 46%;
+      left: 48%;
+    }
     .celebrate-motion {
       @include background(contain);
       @include center;
 
-      width: 130px;
-      height: 130px;
+      width: 120px;
+      height: 120px;
       position: absolute;
       // right: 0;
 
@@ -378,6 +383,17 @@ body {
       width: 150px;
       height: 150px;
       opacity: 0;
+      .celebrate-motion {
+        @include background(contain);
+        @include center;
+
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        // right: 0;
+
+        animation: rotate 5s 0s linear infinite;
+      }
     }
   }
   .link {

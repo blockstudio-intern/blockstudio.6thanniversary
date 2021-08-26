@@ -55,7 +55,9 @@ $(function () {
     const RAW_IMAGE_WIDTH = 7000;
     const RAW_IMAGE_HEIGHT = 5000;
     // mini-map 128 * 167.7
-    const MINIMAP_WIDTH = 10;
+    const MINIMAP_WIDTH = 200;
+    const MINIMAP_HEIGHT = 130;
+
     const IMAGE_RATE = RAW_IMAGE_HEIGHT / RAW_IMAGE_WIDTH;
 
     const painting = document.getElementById("rawImage");
@@ -66,15 +68,22 @@ $(function () {
     const minimap = document.getElementById("minimap"); // 1/10
     const minimapRect = minimap.getBoundingClientRect();
     const pointer = document.getElementById("minimap-pointer");
-    const pointerWidth = viewWidth / RAW_IMAGE_WIDTH * MINIMAP_WIDTH;
+    const pointerWidth = MINIMAP_WIDTH / 90 * MINIMAP_WIDTH / 90;
     pointer.style.width = pointerWidth + "px";
-    pointer.style.height = (pointerWidth * IMAGE_RATE) + "px";
+    pointer.style.height = pointerWidth + "px";
+
+    
     const pointerRect = pointer.getBoundingClientRect();
     const scale = [
         (minimapRect.width - pointerRect.width) / (RAW_IMAGE_WIDTH - viewRect.width),
         (minimapRect.height - pointerRect.height) / (RAW_IMAGE_HEIGHT - viewRect.height)
     ];
-
+    const width = pointer.clientWidth
+    const height = pointer.clientHeight
+    const diffX = MINIMAP_WIDTH - width
+    const diffY = MINIMAP_WIDTH - height
+    pointer.style.transform = `translate3d(${diffX / 2.2}px, ${diffY / 3.2}px, 0)`
+    
     // 1. Initialize eg.Axes
     const axes = new eg.Axes({
         rawX: {
@@ -101,7 +110,6 @@ $(function () {
         scale: [-1, -1]
     }));
 });
-
 
 
 
