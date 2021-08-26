@@ -81,7 +81,7 @@
     <!-- End Nav -->
     <!-- End of Cursor -->
     <div class="wrapper" id="container">
-        <div class="map-wrapper"  style="background-image: url(assets/images/grid.png);">
+        <div class="map-wrapper" id="map" style="background-image: url(assets/images/grid.png);">
             <a href="themain_island.html" class="island main-island" id="main"
                 style="background-image: url(assets/images/island/island--lg/the-main-island--lg.png);">
                 <div class="island--hover main-island--hover"
@@ -209,12 +209,12 @@
     </div>
     <!-- js -->
     <script>
-        const rawImage = document.querySelector('#imageView')
-            const width = rawImage.clientWidth
-            const height = rawImage.clientHeight
+        const map = document.querySelector('#map')
+            const width = map.clientWidth
+            const height = map.clientHeight
             const diffX = window.innerWidth - width
             const diffY = window.innerHeight - height
-            rawImage.style.transform = `translate3d(${diffX / 2}px, ${diffY / 2}px, 0)`
+            map.style.transform = `translate3d(${diffX / 2}px, ${diffY / 2}px, 0)`
     </script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/template.js"></script>
