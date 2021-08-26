@@ -816,6 +816,77 @@ body {
       }
     }
   }
+  .popup-container-islanders {
+    @include center();
+    top: 45%;
+    width: calc(96% - 50px);
+    //  @include center();
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .popup-intro {
+      width: 810px;
+      .popup-title {
+        text-align: center;
+      }
+    }
+
+    .popup-pics {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    .islanders-pic {
+      @include background(cover);
+
+      height: 200px;
+      width: 200px;
+      animation: pic-display 1.5s 1s;
+      margin: 12px;
+      &::before {
+        content: "";
+        height: 200px;
+        width: 200px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: picture 1s linear 1.5s both;
+      }
+      .front {
+        width: 200px;
+        text-align: center;
+        position: absolute;
+        top: -12%;
+      }
+      &:hover {
+        transform: rotateY(180deg);
+      }
+
+      &:hover > .pic--back {
+        display: block;
+      }
+      .pic--back {
+        transform: rotateY(180deg);
+        @include background(cover);
+
+        display: none;
+        height: 200px;
+        width: 200px;
+
+        &:hover {
+          display: block;
+        }
+        .back__para {
+          position: absolute;
+          top: 10%;
+          left: 15%;
+        }
+      }
+    }
+  }
 }
 
 /* -------------------------- *\
