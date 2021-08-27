@@ -31,7 +31,7 @@ h6 {
 }
 a {
   // text-decoration: none;
-  color: $blue;
+  color: $black;
 }
 // ** 隱藏滾動條 ** \\
 html {
@@ -272,8 +272,9 @@ body {
         left: 48%;
         top: 80%;
         .islanders--hover {
-          left: 121%;
-          top: -10%;
+          width: 30vw;
+          left: 110%;
+          top: 20%;
         }
       }
       &.boat-1 {

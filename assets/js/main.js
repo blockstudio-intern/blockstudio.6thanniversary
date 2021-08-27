@@ -89,11 +89,11 @@ $(function () {
     // 1. Initialize eg.Axes
     const axes = new eg.Axes({
         rawX: {
-            range: [1000, RAW_IMAGE_WIDTH - viewRect.width],
+            range: [0, RAW_IMAGE_WIDTH - viewRect.width],
             bounce: 10
         },
         rawY: {
-            range: [1000, RAW_IMAGE_HEIGHT - viewRect.height],
+            range: [0, RAW_IMAGE_HEIGHT - viewRect.height],
             bounce: 10
         }
     }, {
