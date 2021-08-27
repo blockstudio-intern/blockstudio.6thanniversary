@@ -34,84 +34,77 @@ function showTime() {
 
 showTime();
 
-//Draggable//
-var $container = $("#container");
-
-function update() {
-    Draggable.create(".map-wrapper", {
-        bounds: $container,
-        edgeResistance: 0.8,
-        inertia: true,
-        type: "x,y",
-        allowEventDefault: true,
-        throwProps: true,
-        autoScroll: true,
-    });
-}
-
-update();
-
 //mini-map//
-$(function () {
-    // raw-image 1280 * 1677
-    const RAW_IMAGE_WIDTH = 7000;
-    const RAW_IMAGE_HEIGHT = 5000;
-    // mini-map 128 * 167.7
-    const MINIMAP_WIDTH = 200;
-    const MINIMAP_HEIGHT = 130;
 
-    const IMAGE_RATE = RAW_IMAGE_HEIGHT / RAW_IMAGE_WIDTH;
 
-    const painting = document.getElementById("rawImage");
-    const view = document.getElementById("imageView");
-    const viewWidth = view.getBoundingClientRect().width;
-    view.style.height = (viewWidth * IMAGE_RATE) + "px";
-    const viewRect = view.getBoundingClientRect();
-    const minimap = document.getElementById("minimap"); // 1/10
-    const minimapRect = minimap.getBoundingClientRect();
-    const pointer = document.getElementById("minimap-pointer");
-    const pointerWidth = MINIMAP_WIDTH / 90 * MINIMAP_WIDTH / 90;
-    pointer.style.width = pointerWidth + "px";
-    pointer.style.height = pointerWidth + "px";
-
-    
-    const pointerRect = pointer.getBoundingClientRect();
-    const scale = [
-        (minimapRect.width - pointerRect.width) / (RAW_IMAGE_WIDTH - viewRect.width),
-        (minimapRect.height - pointerRect.height) / (RAW_IMAGE_HEIGHT - viewRect.height)
-    ];
-    const width = pointer.clientWidth
-    const height = pointer.clientHeight
-    const diffX = MINIMAP_WIDTH - width
-    const diffY = MINIMAP_WIDTH - height
-    pointer.style.transform = `translate3d(${diffX / 2.2}px, ${diffY / 3.2}px, 0)`
-    
-    // 1. Initialize eg.Axes
-    const axes = new eg.Axes({
-        rawX: {
-            range: [0, RAW_IMAGE_WIDTH - viewRect.width],
-            bounce: 10
-        },
-        rawY: {
-            range: [0, RAW_IMAGE_HEIGHT - viewRect.height],
-            bounce: 10
+//Draggable//
+(() => {
+    var $container = $("#container");
+    const map = document.querySelector('.map-wrapper')
+    const minmap = document.getElementById('minimap')
+    const pointer = document.getElementById('minimap-pointer')
+    const { clientWidth: mapWidth, clientHeight: mapHeight} = map
+    const { clientWidth: minmapWidth, clientHeight: minmapHeight } = minmap
+    const drag = () => {
+        const style = window.getComputedStyle(map)
+        const matrix = style.transform || style.webkitTransform || style.mozTransform
+        const matrixType = matrix.includes('3d') ? '3d' : '2d'
+        const matrixValues = matrix.match(/matrix.*\((.+)\)/)[1].split(', ')
+        if (matrixType === '2d') {
+            const x = matrixValues[4]
+            const y = matrixValues[5]
+            const scaleX = minmapWidth / mapWidth
+            const scaleY = minmapHeight / mapHeight
+            const pointX = -(x - innerWidth / 2) * scaleX
+            const pointY = -(y - innerHeight / 2) * scaleY
+            pointer.style.transform = `translate3d(${pointX}px, ${pointY}px, 0)`
         }
-    }, {
-        deceleration: 0.01
-    });
+    }
+    function update() {
+        Draggable.create(".map-wrapper", {
+            bounds: $container,
+            edgeResistance: 0.8,
+            inertia: true,
+            type: "x,y",
+            allowEventDefault: true,
+            throwProps: true,
+            autoScroll: true,
+            onDrag: drag
+        });
+    
+    }
+    drag()
+    update();
+})()
 
-    // 2. attach event handler
-    axes.on("change", ({ pos }) => {
-        painting.style[eg.Axes.TRANSFORM] = `translate3d(${-pos.rawX}px, ${-pos.rawY}px, 0)`;
-        pointer.style[eg.Axes.TRANSFORM]
-            = `translate3d(${pos.rawX * scale[0]}px, ${pos.rawY * scale[1]}px, 0)`;
-    });
 
-    // 3. Initialize a inputType and connect it
-    axes.connect("rawX rawY", new eg.Axes.PanInput(view, {
-        scale: [-1, -1]
-    }));
-});
+
+
+    // // 1. Initialize eg.Axes
+    // const axes = new eg.Axes({
+    //     rawX: {
+    //         range: [0, RAW_IMAGE_WIDTH - viewRect.width],
+    //         bounce: 10
+    //     },
+    //     rawY: {
+    //         range: [0, RAW_IMAGE_HEIGHT - viewRect.height],
+    //         bounce: 10
+    //     }
+    // }, {
+    //     deceleration: 0.01
+    // });
+
+    // // 2. attach event handler
+    // axes.on("change", ({ pos }) => {
+    //     painting.style[eg.Axes.TRANSFORM] = `translate3d(${-pos.rawX}px, ${-pos.rawY}px, 0)`;
+    //     pointer.style[eg.Axes.TRANSFORM]
+    //         = `translate3d(${pos.rawX * scale[0]}px, ${pos.rawY * scale[1]}px, 0)`;
+    // });
+
+    // // 3. Initialize a inputType and connect it
+    // axes.connect("rawX rawY", new eg.Axes.PanInput(view, {
+    //     scale: [-1, -1]
+    // }));
 
 
 
