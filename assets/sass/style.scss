@@ -738,6 +738,24 @@ body {
       }
     }
   }
+  .popup-pic--lg {
+    @include center();
+    @include background(cover);
+    animation: pic-display 1.5s 1s;
+
+    width: calc(96% - 50px);
+    height: calc(96% - 50px);
+    &::after {
+      content: "";
+      width: calc(96% - 50px);
+      height: calc(96% - 50px);
+      background-color: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: picture 1s linear 1.5s both;
+    }
+  }
   .popup-container-mi {
     @include center();
     width: calc(96% - 50px);
