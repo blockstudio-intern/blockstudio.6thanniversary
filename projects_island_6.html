@@ -22,7 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    
+    <!-- Preload -->
+    <link rel="preload" href="assets/images/island/island--trans/project05_0060.jpg" as="image">
     <!-- Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,7 @@
 </head>
 <body>
     <!-- Loading -->
-
+    <svg id="fader"></svg>
     <div class="wrapper" id="container">
         <!-- Start Nav -->
         <div class="nav">
@@ -75,11 +76,10 @@
         </div>
         <!-- End Nav -->
         <!-- Container -->
-        <div class="video-container">
-            <video id="video_background" width="100%" preload="auto" muted>
-                <source src="assets/mp4/project05.mp4" type="video/mp4">
-            </video>
-        </div>
+        <a href="index.html" class="close-btn" style="background-image: url(assets/images/popup/icon/btn-close.png);">
+            <div class="close-btn--hover" style="background-image: url(assets/images/popup/icon/btn-close--hover.png);">
+            </div>
+        </a>
         
         <!-- Start popup -->
         <div class="popup main-island-popup">

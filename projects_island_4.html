@@ -22,7 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    
+    <!-- Preload -->
+    <link rel="preload" href="assets/images/island/island--trans/project06_0060.jpg" as="image">
     <!-- Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,7 @@
 </head>
 <body>
     <!-- Loading -->
-
+    <svg id="fader"></svg>
     <div class="wrapper" id="container">
         <!-- Start Nav -->
         <div class="nav">
@@ -77,9 +78,7 @@
         <!-- Container -->
         <!--<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/591967711?background=1&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=c9c8562ce2" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="main-island"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>-->
         <div class="video-container">
-            <video id="video_background" width="100%" preload="auto" muted>
-                <source src="assets/mp4/project06.mp4" type="video/mp4">
-            </video>
+            <img src="assets/images/island/island--trans/project06_0060.jpg">
         </div>
         
         <!-- Start popup -->
@@ -88,17 +87,19 @@
                 <div class="popup-island"
                     style="background-image: url(assets/images/island/island--sm/projects-island-4--sm.png);width: 25px;"></div>
                 <h4>Projects Island - 4</h4>
-                <div class="close-btn" style="background-image: url(assets/images/popup/icon/btn-close.png);">
-                    <a href="index.html" class="close-btn--hover" style="background-image: url(assets/images/popup/icon/btn-close--hover.png);">
-                    </a>
-                </div>
+                <a href="index.html" class="close-btn" style="background-image: url(assets/images/popup/icon/btn-close.png);">
+                    <div class="close-btn--hover" style="background-image: url(assets/images/popup/icon/btn-close--hover.png);">
+                    </div>
+                </a>
             </div>
             <div class="popup-container-nl">
                 <div class="popup-content">
                     <section class="popup-item popup-pic" style="background-image: url(assets/images/popup/Section_1.jpeg);">
                     </section>
                     <section class="popup-item popup-intro">
-                        <h1 class="popup-title zh-subtitle" data-text="TDRI台灣設計研究院" >TDRI台灣設計研究院</h1>
+                        <div class="title-container">
+                            <h1 class="popup-title zh-subtitle" data-text="TDRI台灣設計研究院">TDRI台灣設計研究院</h1>
+                        </div>
                         <p>抓住關鍵字「品牌的連貫性」、「帶點趣味吸睛巧思」、身為設計產業的領導組織，在網站方便必須表現出「敢於挑戰、勇於嘗試的領頭羊角色」。
                         全站以品牌識別之洞見兩個球體概念出發，圖像化、動態化「建立」、「驅動」、「推動」、「連結」、「擴散」等幾個大目標。</p>
                         <p class="link en-normal">Website － <a href="tdri.org.tw/about">tdri.org.tw/about</a></p>

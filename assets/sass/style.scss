@@ -721,10 +721,14 @@ body {
       }
       .popup-intro {
         margin-left: 80px;
+        .title-container {
+          width: 350px;
+        }
         p {
           position: absolute;
           top: 60px;
           text-align: justify;
+          width: 300px;
         }
         .link {
           position: absolute;
