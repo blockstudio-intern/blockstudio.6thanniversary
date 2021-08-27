@@ -40,8 +40,10 @@ var $container = $("#container");
 function update() {
     Draggable.create(".map-wrapper", {
         bounds: $container,
-        edgeResistance: 0.5,
+        edgeResistance: 0.8,
+        inertia: true,
         type: "x,y",
+        allowEventDefault: true,
         throwProps: true,
         autoScroll: true,
     });
