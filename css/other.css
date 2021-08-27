@@ -27,7 +27,7 @@ body {
   z-index: 999999;
   pointer-events: none;
   background: white;
-  animation-duration: 1500ms;
+  animation-duration: 1000ms;
   animation-timing-function: ease-in-out;
 }
 @keyframes fade-out {
