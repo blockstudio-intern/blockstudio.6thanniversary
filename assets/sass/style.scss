@@ -574,6 +574,8 @@ body {
   height: 360px;
   width: 640px;
   animation: pic-display 1.5s 1s;
+  overflow: hidden;
+
   &::after {
     content: "";
     height: 360px;
@@ -765,6 +767,8 @@ body {
         height: 360px;
         width: 640px;
         animation: pic-display 1.5s 1s;
+        overflow: hidden;
+
         &::after {
           content: "";
           height: 360px;
@@ -930,6 +934,7 @@ body {
       width: 200px;
       animation: pic-display 1.5s 1s;
       margin: 12px;
+      overflow: hidden;
       &::before {
         content: "";
         height: 200px;
