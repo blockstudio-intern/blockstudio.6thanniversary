@@ -30,6 +30,9 @@ h5,
 h6 {
   margin: 0;
 }
+h5 {
+  color: $light-gray;
+}
 a {
   // text-decoration: none;
   color: $black;
@@ -492,7 +495,7 @@ body {
     width: 100vw;
     height: 100vh;
     .img {
-      @include background(contain);
+      @include background(cover);
       @include center;
       width: 100vw;
       height: 100vh;
@@ -935,6 +938,7 @@ body {
       animation: pic-display 1.5s 1s;
       margin: 12px;
       overflow: hidden;
+      transition: all 0.3s ease;
       &::before {
         content: "";
         height: 200px;
@@ -971,8 +975,13 @@ body {
         }
         .back__para {
           position: absolute;
-          top: 10%;
-          left: 15%;
+          width: 100%;
+          height: 100%;
+          padding: 20px 30px;
+          p {
+            margin-top: 15px;
+            text-align: justify;
+          }
         }
       }
     }

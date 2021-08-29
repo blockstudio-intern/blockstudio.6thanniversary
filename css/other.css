@@ -281,6 +281,16 @@ h4 {
   font-size: 8pt;
   line-height: 20pt;
 }
+h4 {
+  font-family: normal-title-en;
+  font-size: 6pt;
+  line-height: 20pt;
+}
+h5 {
+  font-family: normal-title-en;
+  font-size: 3pt;
+  line-height: 12pt;
+}
 p {
   font-family: light-font;
   font-size: 12pt;
