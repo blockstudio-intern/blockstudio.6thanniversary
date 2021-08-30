@@ -384,7 +384,7 @@ body {
     }
   }
   .cele {
-    width: 75vw;
+    // width: 75vw;
     @include center();
     top: 25%;
     text-align: center;
@@ -417,12 +417,11 @@ body {
   .ben {
     display: none;
     width: 100vw;
-    height: 100vh;
+    height: 100vw;
     position: absolute;
-    top: -5%;
+    bottom: -35vw;
     .ben_item {
       position: absolute;
-      top: -20%;
       @include background(90vw);
 
       width: 100vw;
