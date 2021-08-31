@@ -302,29 +302,35 @@ p {
   line-height: 28pt;
 }
 /* End of font setting */
-@keyframes loadingOut {
-  0% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+/* Loading & Transition */
+@keyframes loadingOut{
+  0% {opacity: 1;}
+  30% {opacity: 1;}
+  50% {opacity: 1;}
+  80% {opacity: 0;}
+  100% {opacity: 0;} 
 }
-.loader {
+.loader{
   width: 100%;
   height: 100%;
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
   position: fixed;
   z-index: 10002;
   top: 0;
   animation: loadingOut 4s forwards;
+}
+canvas {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+#main-loader {
+	position: absolute;
+	left: 0;
+	top: 0;
+  background-color: lightgrey;
+	width: 100%;
+	height: 100%;
+  overflow: hidden;
 }

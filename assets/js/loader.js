@@ -1,3 +1,70 @@
+$(document).ready(function() {
+    $(window).on("load", function() {
+        $("#main-loader").fadeOut(7000);
+    });
+});
+
+/* Press word */
+var container, material;
+var deep = 1, fluid = 0.015;
+var uniforms = {
+    speed: 0,
+    volatility: 0
+};
+
+function init() {
+    container = document.getElementById("main-loader");
+    material = new Blotter.LiquidDistortMaterial();
+    //
+    var text = new Blotter.Text("Block Studio", {
+        weight: 800,
+        size: 80,
+        fill: 'black',
+        paddingLeft: 80,
+        paddingRight: 80,
+        paddingBottom: 80,
+        paddingTop: 80
+    });
+    /*
+     * https://blotter.js.org
+     */
+    var blotter = new Blotter(material, {
+        texts: text
+    });
+    var canvas = blotter.forText(text).domElement;
+    container.appendChild(canvas);
+    /*
+     * https://pressurejs.com
+     */
+    Pressure.set(container, {
+        change: function(force, event) {
+            deep = force;
+            fluid = 0.015;
+        },
+        end: function() {
+            fluid = 0.15;
+            deep = 0;
+        }
+    });
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+}
+
+function render() {
+    uniforms.volatility += ((deep * 0.5) - uniforms.volatility) * fluid;
+    uniforms.speed += ((deep * 0.5) - uniforms.speed) * fluid;
+    //
+    material.uniforms.uVolatility.value = uniforms.volatility;
+    material.uniforms.uSpeed.value = uniforms.speed;
+}
+
+init();
+animate();
+
+/* coordination */
 jQuery(document).ready(function ($) {
     var mouseX = window.innerWidth / 2,
         mouseY = window.innerHeight / 2;
