@@ -248,10 +248,10 @@ jQuery(".celebrate-btn").on('click',function(event){
     const d = $(`<audio src="https://blockstudio-intern.github.io/Ben_afterparty/sound/loops_8bit.mp3" controls="" id="audioPlayer" style="display: none" autoplay="true"></audio>`);
     $('.nav').addClass('active')
     $('.nav').append(d);
-    setTimeout(() => d.remove(), 15000);
+    setTimeout(() => d.remove(), 4000);
     setTimeout(function() {
     $('.nav').removeClass('active');
-    }, 15000);
+    }, 4000);
 
     }
 });
