@@ -904,14 +904,11 @@ body {
       }
       .popup-intro {
         margin-left: 80px;
-        .title-container {
-          width: 350px;
-        }
-        p {
+        width: 360px;
+        .popup-para {
           position: absolute;
-          top: 60px;
+          margin-top: 24px;
           text-align: justify;
-          width: 300px;
         }
         .link {
           position: absolute;
@@ -1050,14 +1047,13 @@ body {
       margin-top: 40px;
     }
     .islanders-pic {
-      @include background(cover);
+      @include background(contain);
 
       height: 200px;
       width: 200px;
       animation: pic-display 1.5s 1s;
       margin: 12px;
-      overflow: hidden;
-      transition: all 0.3s ease;
+      // transition: all 0.3s ease;
       &::before {
         content: "";
         height: 200px;
@@ -1223,7 +1219,7 @@ body {
     height: 100%;
   }
   50% {
-    width: 640px;
+    width: 100%;
     height: 100%;
   }
   100% {
