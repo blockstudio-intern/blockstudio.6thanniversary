@@ -1070,13 +1070,13 @@ body {
         position: absolute;
         top: -12%;
       }
-      &:hover {
-        transform: rotateY(180deg);
-      }
+      // &:hover {
+      //   transform: rotateY(180deg);
+      // }
 
-      &:hover > .pic--back {
-        display: block;
-      }
+      // &:hover > .pic--back {
+      //   display: block;
+      // }
       .pic--back {
         transform: rotateY(180deg);
         @include background(cover);
