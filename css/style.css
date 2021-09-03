@@ -1653,7 +1653,7 @@ canvas {
   position: absolute;
   top: 48%;
   left: 62%;
-  text-align: justify;
+  text-align: left;
   width: 200px;
 }
 
