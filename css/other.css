@@ -16,8 +16,8 @@ body {
   cursor: auto;
   animation: loadingIn 3s;
 }
-/* add transition fade out */
-/* add transition fade out */
+/* add transition fade out *\
+\* ----------------------- */
 #fader {
   position: fixed;
   top: 0;
@@ -57,10 +57,9 @@ body {
   opacity: 1;
   animation-name: fade-in;
 }
-/* add transition fade out */
-/* add transition fade out */
 
-/* coordinate */
+/* coordinate ------------ *\
+\* ----------------------- */
 #coords {
   border-radius: 50%;
   width: 100%;
@@ -133,8 +132,9 @@ body {
   -o-user-select: none;
   user-select: none;
 }
-/* End of coordinate */
-/* font setting */
+
+/* font setting ---------- *\
+\* ----------------------- */
 @font-face {
   font-family: normal-title;
   font-weight: 400;
@@ -301,8 +301,10 @@ p {
   font-size: 12pt;
   line-height: 28pt;
 }
-/* End of font setting */
-/* Loading & Transition */
+
+/* Loading & Transition -- *\
+\* ----------------------- */
+
 @keyframes loadingOut {
   0% {
     opacity: 1;
@@ -344,3 +346,4 @@ canvas {
   height: 100%;
   overflow: hidden;
 }
+
