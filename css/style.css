@@ -1655,6 +1655,8 @@ canvas {
   left: 62%;
   text-align: left;
   width: 200px;
+  margin-block-start: 0em;
+    margin-block-end: 0em;
 }
 
 .popup .popup-container-islanders {
